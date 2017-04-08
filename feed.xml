@@ -1,2 +1,87 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-04-04T00:38:13+08:00</updated><id>http://localhost:4000/</id><title type="html">自然进化</title><subtitle>关注AI技术发展和应用的交流平台
-</subtitle><entry><title type="html">Machine Learning Resources</title><link href="http://localhost:4000/ml/2017/04/03/ml-resources.html" rel="alternate" type="text/html" title="Machine Learning Resources" /><published>2017-04-03T18:54:47+08:00</published><updated>2017-04-03T18:54:47+08:00</updated><id>http://localhost:4000/ml/2017/04/03/ml-resources</id><content type="html" xml:base="http://localhost:4000/ml/2017/04/03/ml-resources.html">&lt;p&gt;&lt;a href=&quot;https://github.com/HFTrader/DeepLearningBook&quot;&gt;DeepLearningBook&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">DeepLearningBook</summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-04-08T23:40:30+08:00</updated><id>http://localhost:4000/</id><title type="html">自然进化</title><subtitle>关注AI技术发展和应用的交流平台
+</subtitle><entry><title type="html">人工智能、机器学习与深度学习之间的关系</title><link href="http://localhost:4000/ml/2017/04/08/ai-ml-dl.html" rel="alternate" type="text/html" title="人工智能、机器学习与深度学习之间的关系" /><published>2017-04-08T15:22:47+08:00</published><updated>2017-04-08T15:22:47+08:00</updated><id>http://localhost:4000/ml/2017/04/08/ai-ml-dl</id><content type="html" xml:base="http://localhost:4000/ml/2017/04/08/ai-ml-dl.html">&lt;h1 id=&quot;人工智能机器学习与深度学习之间的关系&quot;&gt;人工智能、机器学习与深度学习之间的关系&lt;/h1&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;人工智能(Artificial Intelligence)&lt;/code&gt;是一个最广泛的概念，人工智能的目的就是让计算机这台机器能够象人一样思考。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;机器学习(Machine Learning)&lt;/code&gt;是人工智能的分支，专门研究计算机怎样模拟或实现人类的学习行为，以获取新的知识或技能，使之不断改善自身的性能。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;深度学习(Deep Learning)&lt;/code&gt;是一种机器学习的方法，它试图使用包含复杂结构或由多重非线性变换构成的多个处理层（神经网络）对数据进行高层抽象的算法。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/doc-img/ai-ml-dl.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;参考文献&quot;&gt;参考文献&lt;/h2&gt;
+
+&lt;p&gt;[1]. &lt;a href=&quot;https://www.zhihu.com/question/30545893/answer/152317466&quot;&gt;深度学习和人工智能之间是什么样的关系&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">人工智能、机器学习与深度学习之间的关系</summary></entry><entry><title type="html">工欲善其事必先利其器——Markdown</title><link href="http://localhost:4000/tools/2017/04/03/makdown-tools.html" rel="alternate" type="text/html" title="工欲善其事必先利其器——Markdown" /><published>2017-04-03T18:54:47+08:00</published><updated>2017-04-03T18:54:47+08:00</updated><id>http://localhost:4000/tools/2017/04/03/makdown-tools</id><content type="html" xml:base="http://localhost:4000/tools/2017/04/03/makdown-tools.html">&lt;h2 id=&quot;写作工具利器markdown&quot;&gt;写作工具利器——Markdown&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;We believe that writing is about content, about what you want to say – not about fancy formatting.&lt;/p&gt;
+
+  &lt;p&gt;我们坚信写作写的是内容，所思所想，而不是花样格式。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;上面是我们对写作的本质认识。但现实是我们总要依托一定的工具来进行写作，有所见即所得的（What you see is what you get）Windows 里的Microsoft Office，还有唐纳德老爷爷开发的LaTex: What you do is what you get哲学的写作工具。为了两种方式的兼顾，有了支持Latex实时显示效果的一些工具支持。&lt;/p&gt;
+
+&lt;p&gt;他们的缺点也显而易见，Windows Office写作时需要作者不断的调整格式，还有不同程度的程序崩溃可能性。Latex虽然语法犀利可以做到写作时用code指定排版，但是它海量高深的语法和各种环境搭建问题使得环境搭建和学习曲线非常的长。&lt;/p&gt;
+
+&lt;p&gt;于是Markdown横空出世——Markdown 是一种轻量级的「标记语言」，它实际上是个非常简单、非常容易学习的语法。这个语法简单到每个人都可以在5分钟以内学会。而且又有各种方式可以方便得转换为windows word，html，pdf等格式。可以认为Markdown是对一些复杂语言如LaTex等的又一次升华，就像编程语言一次次的推陈出新。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;http://www.jianshu.com/p/1e402922ee32/&quot;&gt;Markdown——入门指南&lt;/a&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://wowubuntu.com/markdown/basic.html&quot;&gt;Markdown中文版语法说明&lt;/a&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot;&gt;创始人 John Gruber 的 Markdown 语法说明&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;类似编程语言、HTML语言，你甚至可以在一个纯文本编辑器里用Markdown语法进行文章写作，在最终发表时使用其他工具转换为响应的目标文件格式即可。&lt;/p&gt;
+
+&lt;p&gt;说了这么多，Markdown对应的一些工具有什么可以支持我们写作？基本上现在主流的写作需求可以分为两类：&lt;/p&gt;
+
+&lt;p&gt;（1）一类是普通文档、图表等的基本需求&lt;/p&gt;
+
+&lt;p&gt;（2）一类是有图表、数学公式等的科技写作需求&lt;/p&gt;
+
+&lt;p&gt;在我用过的工具中，认为下面两个工具可以很好的满足已上两种需求。在工具选择时自然也考虑了跨平台问题，下面的两种工具对于跨平台支持：Windows、Mac、Linux都有很好的支持。&lt;/p&gt;
+
+&lt;h2 id=&quot;一--普通文档写作利器markdown--atom&quot;&gt;一，  普通文档写作利器：Markdown + Atom&lt;/h2&gt;
+
+&lt;p&gt;Atom是github出品的IDE工具，经过几年的发展目前基本上可以和Sublime Text一较高下。但是由于他对于插件的管理感觉笔Sublime Text要方便人性许多，所以我现在基本上倾向于使用Atom。对于上文说的第一类需求普通文档写作和基本图表中的需求，使用Atom然后安装对应的插件即可。可以参考下下面的文章来进行Atom的安装与配置。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/fanzhidongyzby/p/6637084.html&quot;&gt;使用Atom打造无懈可击的Markdown编辑器&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;二-科技文章写作利器markdown--r&quot;&gt;二， 科技文章写作利器：Markdown + R&lt;/h2&gt;
+
+&lt;p&gt;在科技文章写作时最多用到的就是数学公式的展现了。对于这种情况LaTex是有自己的语法支持来搞定的，而Markdown的解决之道就是对LaTex公式语法进行兼容。&lt;/p&gt;
+
+&lt;p&gt;为了更加方便的实时调试公式与公式对应的图表，一位极其熟悉LaTeX，也熟悉Markdown的国人yihui同学，意识到LaTeX它可以作为最终格式生成。在他的大作——R包中的knitr，提供了Markdown支持。并说服R社区主流编辑器厂家，开源软件RStudio 提供 Markdown支持，从而使得Rmd这种新格式开始流行。我们有幸看到这个重要格式的诞生，国人的贡献如此重要。&lt;/p&gt;
+
+&lt;p&gt;在Mac上安装R语言和RStudio如下所示。&lt;/p&gt;
+
+&lt;h3 id=&quot;1-install-r-language&quot;&gt;1. install r language&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;brew tap homebrew/science
+brew install r&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;2-download-rstudio-and-install&quot;&gt;2. download rstudio and install&lt;/h3&gt;
+
+&lt;p&gt;download latest version from the url below:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;https://www.rstudio.com/products/rstudio/download/&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Rstudio等的配置等叙述可以参考： &lt;a href=&quot;http://www.yangzhiping.com/tech/r-markdown-knitr.html&quot;&gt;Markdown写作浅谈&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;参考&quot;&gt;参考&lt;/h2&gt;
+
+&lt;p&gt;[1]. &lt;a href=&quot;http://www.jianshu.com/p/1e402922ee32/&quot;&gt;Markdown——入门指南&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[2]. &lt;a href=&quot;http://wowubuntu.com/markdown/basic.html&quot;&gt;Markdown中文版语法说明&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[3]. &lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot;&gt;创始人 John Gruber 的 Markdown 语法说明&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[4]. &lt;a href=&quot;http://www.cnblogs.com/fanzhidongyzby/p/6637084.html&quot;&gt;使用Atom打造无懈可击的Markdown编辑器&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[5]. &lt;a href=&quot;http://www.yangzhiping.com/tech/r-markdown-knitr.html&quot;&gt;Markdown写作浅谈&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">写作工具利器——Markdown</summary></entry><entry><title type="html">Machine Learning Resources</title><link href="http://localhost:4000/ml/2017/04/03/ml-resources.html" rel="alternate" type="text/html" title="Machine Learning Resources" /><published>2017-04-03T18:54:47+08:00</published><updated>2017-04-03T18:54:47+08:00</updated><id>http://localhost:4000/ml/2017/04/03/ml-resources</id><content type="html" xml:base="http://localhost:4000/ml/2017/04/03/ml-resources.html">&lt;p&gt;&lt;a href=&quot;https://github.com/HFTrader/DeepLearningBook&quot;&gt;DeepLearningBook&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">DeepLearningBook</summary></entry></feed>
