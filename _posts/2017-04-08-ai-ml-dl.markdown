@@ -17,4 +17,4 @@ categories: ml
 
 ## 参考文献
 
-[深度学习和人工智能之间是什么样的关系](https://www.zhihu.com/question/30545893/answer/152317466)
+[1]. [深度学习和人工智能之间是什么样的关系](https://www.zhihu.com/question/30545893/answer/152317466)
