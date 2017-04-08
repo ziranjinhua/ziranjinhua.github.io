@@ -1,0 +1,1287 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="baidu-site-verification" content="HmwwEvMGyf" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <title>数字信号处理公式变程序（一）——DFT、FFT - 语音识别与合成知识库</title>
+        <meta name="Keywords" content="知识库,微信开发,机器学习,swift,Android,Python,Java,大数据,云计算,PHP,Ruby,C++,JavaScript">
+        <meta name="Description" content="CSDN知识库，按照技术领域和知识结构对海量技术资源进行筛选整理，并通过相关机制进行审核收录。保证入库知识的系统性与优质性。并且所含技术知识图谱有清晰的学习脉络，是技术开发者完善自我知识体系、提升进阶的参照坐标">
+        <link rel="stylesheet" href="http://c.csdnimg.cn/public/common/libs/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="http://c.csdnimg.cn/public/themes/default/css/common.css">
+        <link rel="stylesheet" href="/css/web/font-awesome.min.css">
+        <link rel="stylesheet" href="/min/iconfont.min.css">
+        <link rel="stylesheet" href="http://c.csdnimg.cn/public/themes/default/css/icon.css">
+        <link href="/images/web/favicon.ico" rel="SHORTCUT ICON">
+
+        <script src="/js/web/libs/jquery-1.11.1.min.js" type="text/javascript"></script>
+        <script src="/js/web/libs/bootstrap.min.js" type="text/javascript"></script>
+        <!--<script src="/js/web/statist.js" type="text/javascript"></script>-->
+        <script src="/min/statist.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="/min/colors.min.css" id="colors">
+        <script type='text/javascript'>window.NREUM||(NREUM={});NREUM.info = {"agent":"","beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"7dc04976a0","applicationID":"15009246","applicationTime":35.609699,"transactionName":"Z10AZEZSD0VTUExYCV4XJ0hEQQRFQVlLHiF1bE0fHhkAREZaW10DHwIMUVlWTgxbVw==","queueTime":0,"ttGuid":"2860a7859942b8","agentToken":null}; window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+    </head>
+</html>
+
+<div id='wx_pic' style='margin:0 auto;display:none;'>
+    <img src="/images/wap/logos.jpg" />
+</div>
+
+<body>
+<style>
+	.fine.addfine.isfine{
+		background-position: -190px -250px;
+	}
+	.fine.addfine.isfine:hover{
+		background-position: -133px -250px;
+	}
+</style>
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css"/>
+<script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<style type="text/css">.ui-tooltip{background:#d7eefb!important;color:#688ca1!important;font:12px"Helvetica Neue",Sans-Serif!important;border:1px solid#99CBE7!important;padding:2px 4px!important;border-radius:2px!important;width:auto!important;box-shadow:none!important}</style>
+
+<link rel="stylesheet" href="/min/kl_read.min.css">
+<link rel="stylesheet" href="/min/shCore.min.css" >
+<link rel="stylesheet" href="/min/shThemeDefault.min.css">
+<script type="text/javascript" src="/min/shCore.min.js"></script>
+<script type="text/javascript" src="/min/shBrushAppleScript.min.js"></script>
+<script type="text/javascript" src="/min/shBrushAS3.min.js"></script>
+<script type="text/javascript" src="/min/shBrushBash.min.js"></script>
+<script type="text/javascript" src="/min/shBrushColdFusion.min.js"></script>
+<script type="text/javascript" src="/min/shBrushCpp.min.js"></script>
+<script type="text/javascript" src="/min/shBrushCSharp.min.js"></script>
+<script type="text/javascript" src="/min/shBrushCss.min.js"></script>
+<script type="text/javascript" src="/min/shBrushDelphi.min.js"></script>
+<script type="text/javascript" src="/min/shBrushDiff.min.js"></script>
+<script type="text/javascript" src="/min/shBrushErlang.min.js"></script>
+<script type="text/javascript" src="/min/shBrushGroovy.min.js"></script>
+<script type="text/javascript" src="/min/shBrushJava.min.js"></script>
+<script type="text/javascript" src="/min/shBrushJavaFX.min.js"></script>
+<script type="text/javascript" src="/min/shBrushJScript.min.js"></script>
+<script type="text/javascript" src="/min/shBrushPerl.min.js"></script>
+<script type="text/javascript" src="/min/shBrushPhp.min.js"></script>
+<script type="text/javascript" src="/min/shBrushPlain.min.js"></script>
+<script type="text/javascript" src="/min/shBrushPowerShell.min.js"></script>
+<script type="text/javascript" src="/min/shBrushPython.min.js"></script>
+<script type="text/javascript" src="/min/shBrushRuby.min.js"></script>
+<script type="text/javascript" src="/min/shBrushSass.min.js"></script>
+<script type="text/javascript" src="/min/shBrushScala.min.js"></script>
+<script type="text/javascript" src="/min/shBrushSql.min.js"></script>
+<script type="text/javascript" src="/min/shBrushVb.min.js"></script>
+<script type="text/javascript" src="/min/shBrushXml.min.js"></script>
+<script src="/min/view-history.min.js" type="text/javascript"></script>
+<input type=hidden id="contentId" value="18985">
+<input type=hidden id="sourceId" value="46737517">
+<input type=hidden id="owner" value="shengzhadon">
+<input type=hidden id="page" value="1">
+<input type=hidden id="size" value="10">
+<input type=hidden id="support" value="3">
+<div class="main clearfix">
+	<div class="mainread">
+		<div class="infortop clearfix">
+			<a href="http://lib.csdn.net/base/vras" target="_blank"><img src="http://img.knowledge.csdn.net/upload/base/1490587425183_183.jpg" alt="" width="40" height="40"></a>
+			<span class="text clearfix">
+				<span class="left">
+					<a href="http://lib.csdn.net/base/vras" target="_blank">语音识别与合成</a><em>-</em>
+					<a href="http://lib.csdn.net/vras/node/830" target="_blank">信号处理</a><em>-</em>
+					<a href="http://lib.csdn.net/vras/knowledge/2053" target="_blank">数字信号处理</a>
+				</span>
+				<span class="right">
+					<i class="fa fa-eye" title="阅读数"></i><b>558</b>
+					<span class="addAnchor" style="cursor:pointer">
+						<i class="fa fa-commenting-o" title="评论数"></i><b>0</b>
+					</span>
+				</span>
+			</span>
+		</div>
+		<div class="maincontent whitebk showbox">
+			<h1>数字信号处理公式变程序（一）——DFT、FFT</h1>
+			<p class="author"><em>作者：</em><a href="http://my.csdn.net/shengzhadon" target="_blank">shengzhadon</a></p>
+			<div class="divtexts">
+				
+<p>之前搞了一些数字信号处理算法编程（OC），一直没来得及整理，现在整理一下。陆续会更新，包括FFT、巴特沃斯滤波器（高低带通、高低带阻）、数据差&#20540;（线性、sinc、三次样条*）、数据压缩（等距、平均、峰&#20540;检测）和模仿matlab的STFT功能（spectrogram函数三维绘图）。</p>
+<p><br>
+</p>
+<p><u>注：我比较喜欢使用matlab（也喜欢自己修改matlab的源码做测试，所以重装了好几次了，囧。。。），<u>有部分参考matlab的算法进行（或者直接翻译为OC），算法的</u>运行结果经常会跟matlab运算结果进行比较，算法只做学习用，转载请注明。</u></p>
+<p><u>另外可能会有不足或者理解偏差的地方，路过的高人请不吝赐教。</u></p>
+<p><u><br>
+</u></p>
+<p>好啦，进入正题。</p>
+<p>---------------------------------------------------------------------------------------</p>
+<p>在数字世界中FFT的意义不言而喻（我曾转载一篇文章有提到：http://blog.csdn.net/shengzhadon/article/details/40539101），这里就不再赘述了。FFT（快速傅里叶变换）是DFT的一种特殊情况，就是当运算点的个数是2的整数次幂的时候进行的运算（不够用0补齐），那就先从DFT开始吧。</p>
+<p><br>
+</p>
+<p><strong><span style="font-size:18px">一、DFT</span><span style="font-size:12px">（本部分就是翻译公式）</span></strong></p>
+<p>定义（来自百科）：离散傅里叶变换（Discrete Fourier Transform，缩写为DFT），是傅里叶变换在时域和频域上都呈离散的形式，将信号的时域采样变换为其DTFT的频域采样。在形式上，变换两端（时域和频域上）的序列是有限长的，而实际上这两组序列都应当被认为是离散周期信号的主&#20540;序列。即使对有限长的离散信号作DFT，也应当将其看作其周期延拓的变换。在实际应用中通常采用快速傅里叶变换计算DFT。</p>
+<p><br>
+</p>
+<p>DFT的公式是：设x(n)为M点的有限长序列，即在0≤n≤M-1内有&#20540;，则定义x(n)的N点（N≥M。当N＞M时，补N-M个零&#20540;点），离散傅里叶变化定义为</p>
+<p><img src="http://img.blog.csdn.net/20150703130548952" align="middle" width="300" height="70" alt=""></p>
+<p>其中，<img src="http://img.blog.csdn.net/20150703131143299" width="50" height="30" alt="">为旋转因子（为方便编辑后续记作W(N, nk)，特此说明），其计算公式为<img src="http://img.blog.csdn.net/20150703131710186" width="240" height="30" alt="">，具有以下性质：</p>
+<p>①周期性：W(N, nk) = W(N, (n&#43;rN)k) = W(N, n(k&#43;rN))，其中r问整数。</p>
+<p>②共轭对称性：(W(N, nk))* = W(N, -nk)。</p>
+<p>③可约性：W(N, nk) = W(mN, mnk)，W(N, nk) = W(N/m, nk/m)，其中m为整数，N/m为整数。</p>
+<p>④特殊&#20540;：</p>
+<p><span style="white-space:pre"></span>W(N, N/2) = -1； &nbsp;W(N, (k&#43;N/2)) = -W(N, k)； &nbsp;W(N, (N-k)n) = W(N, (N-n)k) = W(N, -nk)。</p>
+<p>所以，在计算旋转因子的过程中可以适当的使用特殊&#20540;来提高运算的效率。</p>
+<p><br>
+</p>
+<p>在计算DFT时，如果数据的点数够计算的点数，则截取计算点数长的数据进行DFT运算，否则将数据点个数补0至计算点个数，然后进行计算，举例如下（举例只是为了说明问题，没有按照编程语言的书写&#26684;式）。</p>
+<p>比如：数据点数组为 dataArray = {1， 2， 3， 4，5}，可以看出数据长度为5。</p>
+<p><span style="white-space:pre"></span>&nbsp; &nbsp;如果要求做4点DFT运算，则只需截取前4个数作为运算数组进行运算即可，即为{1， 2， 3， 4}；</p>
+<p><span style="white-space:pre"></span>&nbsp; &nbsp;如果要求做8点DFT运算，则需在原数组后补三个0，使长度为8后再进行计算，计算数组为{1， 2， 3， 4，5，0，0，0}。</p>
+<p><br>
+</p>
+<p>旋转因子计算代码如下：</p>
+<p>注：①传入&#20540;&#26684;式为W(N, p)；②为了提高效率，当旋转因子p = 0时，直接返回 &nbsp;result = 1&#43;0*j = 1；③返回&#20540;为负数形式；④利用尤拉公式求负数的指数运算。</p>
+<p></p>
+<pre name="code" class="objc">/*======================================================================
+ * 方法名：  twiddleFactor
+ * 方法功能：求FFT计算过程中的旋转因子 - W(N,p)
+ * 说明：    Euler（尤拉）公式  exp(iθ) = cos(θ) - i*sin(θ)
+ *
+ * 变量名称：
+ *          N   - FFT计算点数
+ *          p   - 旋转因子的阶数
+ *
+ * 返回值：  旋转因子的复数表示
+ *=====================================================================*/
++ (ComplexStruct *)twiddleFactor:(int)N andP:(int)p
+{
+    ComplexStruct *twiddle = [[ComplexStruct alloc] init];
+    
+    if(p==0)
+    {
+        [twiddle setReal:1 andSetImg:0];
+    }
+    else
+    {
+        float tempx = PI_x_2 * p/N;
+        float real = cos(tempx); //计算复数的实部与虚部
+        float img = -1 * sin(tempx);
+    
+        [twiddle setReal:real andSetImg:img]; //调用赋值方法
+    }
+
+    return twiddle;
+}</pre><br>
+DFT流程图和代码如下：
+<p></p>
+<p><img src="http://img.blog.csdn.net/20150706133758387" alt=""><br>
+</p>
+<p></p>
+<pre name="code" class="objc">/*======================================================================
+ * 方法名：  dft
+ * 方法功能：计算数组的DFT，非2的整数次幂的FFT
+ *                N-1
+ * 公式说明：X(k) =  ∑  [x(n)*W(N,nk)]，其中，W(N,nk)为旋转因子，k = 0,1,...,N-1
+ *                n=0
+ *
+ * 
+ *          yVector   - 原始数据
+ *          length    - 原始数据长度
+ *          N         - FFT计算点数
+ *          fftYreal  - FFT后的实部
+ *          fftYImg   - FFT后的虚部
+ *
+ * 返回值：  是否成功的标志，若成功返回true，否则返回false
+ *=====================================================================*/
++ (BOOL)dft:(float *)yVector andOriginalLength:(NSInteger)length andFFTCount:(NSInteger)N andFFTReal:(float *)fftYReal andFFTYImg:(float *)fftYImg
+{
+    // 标志
+    BOOL isFFTOK = false;
+    
+    // 旋转因子指数
+    NSInteger p;
+    
+    // N点运算的原始数据
+    float yVectorN[N];
+    
+    for (int i = 0; i &lt; N; i++)
+    {
+        yVectorN[i] = 0.0;
+    }
+    
+    // 定义计算过程中用到的复数变量
+    ComplexStruct *tempFFTY, *yFFT1, *yFFT2;
+    
+    // 初始化复数变量
+    yFFT1 = [[ComplexStruct alloc]init];
+    yFFT2 = nil;
+    
+    // 判断点数是否够FFT运算点数，并确定最终用于计算的点的值
+    if (length &lt;= N)
+    {
+        // 如果N至少为length，先把yVector全部赋值
+        for (NSInteger i = 0; i &lt; length; i++)
+        {
+            yVectorN[i] = yVector[i];
+        }
+        
+        // 如果 N &gt; length，后面补零
+        if (length &lt; N)
+        {
+            for (NSInteger i = length; i &lt; N; i++)
+            {
+                yVectorN[i] = 0.0;
+            }
+        }
+    }
+    else
+    {
+        // 如果 N &lt; length 截取相应长度的数据进行运算
+        for (NSInteger i = 0; i &lt; N; i++)
+        {
+            yVectorN[i] = yVector[i];
+        }
+    }
+    
+    // 计算结果初始化
+    for (NSInteger i = 0; i &lt; N; i++)
+    {
+        fftYReal[i] = 0.0;
+        fftYImg[i]  = 0.0;
+    }
+    
+    // 运用公式计算
+    for (NSInteger i = 0; i &lt; N; i++)
+    {
+        for (NSInteger j = 0; j &lt; N; j++)
+        {
+            p = i*j;
+            tempFFTY = [FFT twiddleFactor:N andP:p];
+            [yFFT1 setReal:yVectorN[j] andSetImg:0.0];
+            yFFT2 = [ComplexStruct complexMul:yFFT1 and:tempFFTY];
+            fftYReal[i] += [yFFT2 getReal];
+            fftYImg[i] += [yFFT2 getImg];
+        }
+    }
+    
+    return isFFTOK;
+}</pre><br>
+<p><strong><span style="font-size:18px">二、FFT</span></strong></p>
+<p><strong><span style="font-size:18px"><br>
+</span></strong></p>
+<p>1.DFT的运算量</p>
+<p>复数乘法次数为N*N，复数加法次数为N(N-1)，若N&gt;&gt;1，则这两者都近&#20284;为N*N，它随N增大为急速增大。</p>
+<p>改进途径：①利用旋转因子性质减小计算量；②由于运算量和N*N成正比，因而可将N点DFT分解成小点数的DFT，以减少运算量（点数越小，计算量越小）；③改为用FFT计算，复数乘法次数为(N/2)*log(2,N)。</p>
+<p><br>
+</p>
+<p>2.FFT可分为按照时间抽选的基-2算法（库利-图基算法DIT-FFT）和按频率抽选的基-2算法（桑德-图基算法DIF-FFT）。本文采用DIT-FFT算法。</p>
+<p><br>
+</p>
+<p>3.FFT计算原理及流程图</p>
+<p>FFT的计算要求点数必须为2的整数次幂，如果点数不够用0补齐。例如计算{2，3，5，8，4}的8点FFT，需要补3个0后进行计算，如果计算该数组的5点FFT，则先计算8点FFT后截取前5个&#20540;即可（不提倡）。</p>
+<p><br>
+</p>
+<p>（1）原理</p>
+<p><strong><span style="color:#ff0000">公式推导</span></strong></p>
+<p>设序列x(n)点数为N=2^L，L为整数。将N=2^L，先按照n的奇偶分为两组，其中r = 0, 1, ..., N/2-1</p>
+<p>x(2r) = x1(r)</p>
+<p>x(2r-1) = x2(r)</p>
+<p>则可将DFT化为（式1）</p>
+<p><img src="http://img.blog.csdn.net/20150706104058918" alt=""><br>
+</p>
+<p>由上式可以看出一个N点的DFT可以分为两个N/2点的DFT，按照上式右组合成N点DFT。但是这里的x1(r)、x2(r)以及X1(k)、X2(k)都是N/2点的序列，即r,k满足r,k=0, 1, ..., N/2-1。而X(k)却有N点，上式计算的只是X(k)的前半项数的结果，因此还需要计算后半项的&#20540;。</p>
+<p><img src="http://img.blog.csdn.net/20150706105857741" alt=""><br>
+</p>
+<p>将①②③代入（式1），就可将X(k)表达为前后两部分：</p>
+<p>前半部分，X(k)，当k=0, 1, ..., N/2-1</p>
+<p><img src="http://img.blog.csdn.net/20150706110734680" alt=""><br>
+</p>
+<p>后半部分，X(k)，当k=N/2, ..., N-1</p>
+<p><img src="http://img.blog.csdn.net/20150706110746234" alt=""><br>
+</p>
+<p><span style="color:#ff0000"><strong>蝶形运算说明</strong></span></p>
+<p>蝶形运算，符号表示如下图所示：</p>
+<p><img src="http://img.blog.csdn.net/20150706094745919" alt=""><br>
+</p>
+<p>所以，FFT的蝶形运算图表示为（8点，2^3 = 8，运算级数最大为L=3）</p>
+<p><img src="http://img.blog.csdn.net/20150706140940823" alt=""><br>
+</p>
+<p>在蝶形运算中变化规律由W(N, p)推导，其中N为FFT计算点数，J为下角标的&#20540;</p>
+<p>L = 1时，W(N, p) = W(N, J) = W(2^L, J)，其中J = 0;</p>
+<p>L = 2时，W(N, p) = W(N, J) = W(2^L, J)，其中J = 0, 1;</p>
+<p>L = 3时，W(N, p) = W(N, J) = W(2^L, J)，其中J = 0, 1, 2, 3;</p>
+<p>所以，W(N, p) = W(2^L, J)，其中J = 0, 1, ..., 2^(L-1)-1</p>
+<p>又因为2^L = 2^M*2^(L-M) = N*2^(L-M)，这里N为2的整数次幂，即N=2^M，</p>
+<p>W(N, p) = W(2^L, J) = W(N*2^(L-M), J) = W(N, J*2^(M-L))</p>
+<p>所以，p = J*2^(M-L)，此处J = 0, 1, ..., 2^(L-1)-1，当J遍历结束但计算点数不够N时，J=J&#43;2^L，后继续遍历，直到计算点数为N时不再循环。</p>
+<p><u>举例：N=8点的FFT计算</u></p>
+<p>当L=2时，J = 0, 1两个&#20540;，因此p = J*2^(M-L) = 0, 2两个&#20540;，即旋转因子有两个&#20540;W(8, 0)和W(8, 2)，计算中两行之间的距离B = 2^(L-1)=2^(2-1)=2，</p>
+<p><img src="http://img.blog.csdn.net/20150706141636237" alt=""><br>
+</p>
+<p>代入J=0, 1可求得X(0)、X(0&#43;2)和X(1)、X(1&#43;2)，即可求出第2级蝶形运算的X(0), X(1), X(2), X(3)，也就是求出一半，此时J加步进2^L=4，即J=J&#43;2^L=4, 5，</p>
+<p>再代入J=4, 5可求出X(4), X(4&#43;2)和X(5), X(5&#43;2)，即可求出第2级蝶形运算的X(4), X(5), X(6), X(7)，已经全部求出，J循环结束。</p>
+<p><br>
+</p>
+<p><span style="color:rgb(255,0,0)">二进制倒序说明</span><br>
+</p>
+<p>前面数的排列顺序是进行二进制倒序后的排序。二进制倒序是指将某数转化为二进制表示，将最高位看做最低位、次高位看做次低位...以此类推，计算后的纸进行排序。例如3的二进制表示为011b（3=0*2^2&#43;1*2&#43;1），二进制倒序&#20540;为6（011b，最高位看做最低位...即6=0&#43;1*2&#43;1*2^2）</p>
+<p>即0到7的二进制排序是：</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;0, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;6, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;7</p>
+<p>000→000 &nbsp; &nbsp;001→100 &nbsp; &nbsp;010→010&nbsp;&nbsp; &nbsp;011→110 &nbsp; &nbsp;100→001 &nbsp; &nbsp;101→101 &nbsp; &nbsp;110→011&nbsp; &nbsp; 111→111</p>
+<p><br>
+</p>
+<p>（2）流程图及代码</p>
+<p>①FFT运算总流程图，包括</p>
+<p><img src="http://img.blog.csdn.net/20150706132249850" alt=""><br>
+</p>
+<p>②二进制倒序代码（过程见代码注释，可用其他方式实现）</p>
+<p></p>
+<pre name="code" class="objc">// 二进制倒序说明：
+//    二进制倒序是指将数二进制表示后，把最高位当做最低位（以此类推）排序，最高位向次高位进位
+//    如倒序后 0 = 000，1 = 100（最高位+1），2 = 010（最高位向次高位进1）
+//------------------------------------------------------------------------
+//       倒序前              高位-&gt;低位    低位-&gt;高位               倒序后
+//
+//        0                   0 0 0  ---  0 0 0                   0
+//        1                   0 0 1  ---  1 0 0                   4
+//        2    转化为二进制     0 1 0  ---  0 1 0    转化为十进制     2
+//        3   ===========&gt;    0 1 1  ---  1 1 0   ===========&gt;    6
+//        4                   1 0 0  ---  0 0 1                   1
+//        5                   1 0 1  ---  1 0 1                   5
+//        6                   1 1 0  ---  0 1 1                   3
+//        7                   1 1 1  ---  1 1 1                   7
+//------------------------------------------------------------------------
+
+
+/**
+ *  @brief        对数组vector进行二进制倒序处理，按位计算
+ *                实现原理：将原数组下角标倒序后赋值给倒序后数组
+ *  @param[in]    vector             原数组
+ *  @param[in]    N                  数组的长度
+ *  @param[out]   inverseOrderVector 倒序后的数组
+ */
++ (void)inverseOrder:(float *)vector andN:(NSInteger)N andInverseOrderVector:(float *)inverseOrderVector
+{
+    // 求对数，即求出二进制表示时N的位数
+    NSInteger k = log2(N);
+    
+    // 按位处理
+    for (NSInteger i = 0; i &lt; N; i++)
+    {
+        // 下角标号
+        NSInteger temp_i    = i;
+        
+        // 计算后的下角标
+        NSInteger foot      = 0;
+        
+        // 计算过程中，当前所在的位
+        NSInteger j         = 0;
+        
+        // 第j位上的数
+        NSInteger temp_foot = 0;
+        
+        // 每次取低位，变为对应高位，循环求和
+        while (temp_i)
+        {
+            // 取出最后一位
+            temp_foot = temp_i % 2;
+            
+            // 计算将最后一位转化为高位的十进制值，并与之前值累加
+            foot = foot + temp_foot * powf(2, (k - 1 - j));
+            
+            // 将数右移一位，最右位舍弃
+            temp_i = temp_i * 0.5;
+            
+            // 下一位
+            j++;
+        }
+        
+        // 根据下角标取值
+        inverseOrderVector[i] = vector[foot];
+    }
+}</pre><br>
+③根据（1）中推导的内容，FFT的流程图可化为
+<p></p>
+<p><img src="http://img.blog.csdn.net/20150706145347107" alt=""><br>
+</p>
+<p>说明：蝶形运算中又三层循环</p>
+<p>第一层（最外层），完成M次迭代过程，即算出A0(k), A1(k), ..., Am(k)，其中k=0, 1, ..., N；A2(k)为蝶形运算第2级的结果，如A0(k)=x(k), Am(k)=X(k)；</p>
+<p>第二层（中间层），完成旋转因子的变化，步进为2^L；</p>
+<p>第三层（最里层），完成相同旋转因子的蝶形运算。</p>
+<p><br>
+</p>
+<p>FFT实现的代码如下：</p>
+<p></p>
+<pre name="code" class="objc">/*======================================================================
+ * 方法名：  fft
+ * 方法功能：计算数组的FFT，运用蝶形运算
+ *
+ * 变量名称：
+ *          yVector   - 原始数据
+ *          length    - 原始数据长度
+ *          N         - FFT计算点数
+ *          fftYreal  - FFT后的实部
+ *          fftYImg   - FFT后的虚部
+ *
+ * 返回值：  是否成功的标志，若成功返回true，否则返回false
+ *=====================================================================*/
+
++ (BOOL)fft:(float *)yVector andOriginalLength:(NSInteger)length andFFTCount:(NSInteger)N andFFTReal:(float *)fftYReal andFFTYImg:(float *)fftYImg
+{
+    // 确保计算时时2的整数幂点数计算
+    NSInteger N1 = [self nextNumOfPow2:N];
+    
+    // 定义FFT运算是否成功的标志
+    BOOL isFFTOK = false;
+    
+    // 判断计算点数是否为2的整数次幂
+    if (N != N1)
+    {
+        // 不是2的整数次幂，直接计算DFT
+        isFFTOK = [self dft:yVector andOriginalLength:length andFFTCount:N andFFTReal:fftYReal andFFTYImg:fftYImg];
+        
+        // 返回成功标志
+        return isFFTOK;
+    }
+    
+    
+    // 如果计算点数位2的整数次幂，用FFT计算，如下
+    // 定义变量
+    float yVectorN[N1];             // N点运算的原始数据
+    NSInteger powOfN = log2(N1);    // N = 2^powOfN，用于标记最大运算级数(公式中表示为：M)
+    NSInteger level = 1;            // 运算级数（第几次运算），最大为powOfN，初值为第一级运算(公式中表示为：L)
+    NSInteger lineNum;              // 行号，倒序排列后的蝶形运算行号(公式中表示为：k)
+    float inverseOrderY[N1];        // yVector倒序x
+    NSInteger distanceLine = 1;     // 行间距，第level级运算每个蝶形的两个节点距离为distanceLine = 2^(L-1)(公式中表示为：B)
+    NSInteger p;                    // 旋转因子的阶数，旋转因子表示为 W(N, p)，p = J*2^(M-L)
+    NSInteger J;                    // 旋转因子的阶数，旋转因子表示为 W(2^L, J)，J = 0, 1, 2,..., 2^(L-1) - 1 = distanceLine - 1
+    float realTemp, imgTemp, twiddleReal, twiddleImg, twiddleTheta, twiddleTemp = PI_x_2/N1;
+    NSInteger N_4 = N1/4;
+    
+    // 判断点数是否够FFT运算点数
+    if (length &lt;= N1)
+    {
+        // 如果N至少为length，先把yVector全部赋值
+        for (NSInteger i = 0; i &lt; length; i++)
+        {
+            yVectorN[i] = yVector[i];
+        }
+        
+        if (length &lt; N1)
+        {
+            // 如果 N &gt; length 后面补零
+            for (NSInteger i = length; i &lt; N1; i++)
+            {
+                yVectorN[i] = 0.0;
+            }
+        }
+    }
+    else
+    {
+        // 如果 N &lt; length 截取相应长度的数据进行运算
+        for (NSInteger i = 0; i &lt; N1; i++)
+        {
+            yVectorN[i] = yVector[i];
+        }
+    }
+    
+    // 调用倒序方法
+    [self inverseOrder:yVectorN andN:N1 andInverseOrderVector:inverseOrderY];
+
+    // 初始值
+    for (NSInteger i = 0; i &lt; N1; i++)
+    {
+        fftYReal[i] = inverseOrderY[i];
+        fftYImg[i] = 0.0;
+    }
+    
+    // 三层循环
+    //     第三层（最里）：完成相同旋转因子的蝶形运算
+    //     第二层（中间）：完成旋转因子的变化，步进为2^level
+    //     第一层（最外）：完成M次迭代过程，即计算出x(k) = A0(k), A1(k),...,Am(k) = X(k)
+    
+    // 第一层循环
+    while (level &lt;= powOfN)
+    {
+        distanceLine = powf(2, level - 1); // 初始条件 distanceLine = 2^(level-1)
+        J = 0;
+        NSInteger pow2_Level = distanceLine * 2;   // 2^level
+        NSInteger pow2_NSubL = N1/pow2_Level;      // 2^(M-L)
+        
+        // 第二层循环
+        while (J &lt; distanceLine)
+        {
+            p = J * pow2_NSubL;
+            lineNum = J;
+            NSInteger stepCount = 0; // J运算的步进计数
+            
+            // 求旋转因子
+            if (p==0)
+            {
+                twiddleReal = 1.0;
+                twiddleImg = 0.0;
+            }
+            else if (p == N_4)
+            {
+                twiddleReal = 0.0;
+                twiddleImg = -1.0;
+            }
+            else
+            {
+                // 计算尤拉公式中的θ
+                twiddleTheta = twiddleTemp * p;
+                
+                // 计算复数的实部与虚部
+                twiddleReal = cos(twiddleTheta);
+                twiddleImg = -1 * sin(twiddleTheta);
+            }
+            
+            // 第三层循环
+            while (lineNum &lt; N1)
+            {
+                // 计算下角标
+                NSInteger footNum = lineNum + distanceLine;
+                
+                /*---------------------------------------
+                 * 用复数运算计算每级中各行的蝶形运算结果
+                 * X(k) = X(k) + X(k+B)*W(N,p)
+                 * X(k+B) = X(k) - X(k+B)*W(N,p)
+                 *---------------------------------------*/
+                realTemp = fftYReal[footNum] * twiddleReal - fftYImg[footNum] * twiddleImg;
+                imgTemp  = fftYReal[footNum] * twiddleImg + fftYImg[footNum] * twiddleReal;
+                
+                // 将计算后的实部和虚部分别存放在返回数组中
+                fftYReal[footNum] = fftYReal[lineNum] - realTemp;
+                fftYImg[footNum]  = fftYImg[lineNum] - imgTemp;
+                fftYReal[lineNum] = fftYReal[lineNum] + realTemp;
+                fftYImg[lineNum]  = fftYImg[lineNum] + imgTemp;
+                
+                stepCount += pow2_Level;
+                
+                // 行号改变
+                lineNum = J + stepCount;
+            }
+            
+            // 旋转因子的阶数变换，达到旋转因子改变的效果
+            J++;
+        }
+        
+        // 运算级数加一
+        level++;
+    }
+    
+    isFFTOK = true;
+    return isFFTOK;
+}
+</pre><br>
+<br>
+<span style="font-size:18px"><strong>三、DFT、FFT测试结果</strong></span><br>
+<p></p>
+<p><br>
+</p>
+<p>本文开头就已经说了，我个人比较喜欢使用matlab，所以我程序的对比对象当然是matlab。给定<span style="font-family:Menlo; font-size:13px">t1[</span><span style="font-family:Menlo; font-size:13px; color:rgb(39,42,216)">8</span><span style="font-family:Menlo; font-size:13px">] = {</span><span style="font-family:Menlo; font-size:13px; color:rgb(39,42,216)">0</span><span style="font-family:Menlo; font-size:13px">,</span><span style="font-family:Menlo; font-size:13px; color:rgb(39,42,216)">1</span><span style="font-family:Menlo; font-size:13px">,</span><span style="font-family:Menlo; font-size:13px; color:rgb(39,42,216)">2</span><span style="font-family:Menlo; font-size:13px">,</span><span style="font-family:Menlo; font-size:13px; color:rgb(39,42,216)">3</span><span style="font-family:Menlo; font-size:13px">,</span><span style="font-family:Menlo; font-size:13px; color:rgb(39,42,216)">4</span><span style="font-family:Menlo; font-size:13px">,</span><span style="font-family:Menlo; font-size:13px; color:rgb(39,42,216)">5</span><span style="font-family:Menlo; font-size:13px">,</span><span style="font-family:Menlo; font-size:13px; color:rgb(39,42,216)">6</span><span style="font-family:Menlo; font-size:13px">,</span><span style="font-family:Menlo; font-size:13px; color:rgb(39,42,216)">7</span><span style="font-family:Menlo; font-size:13px">};signal=sin(t1);对signal进行8、16、4、13、6点FFT/DFT计算输出的结果和给定128点数据进行128点FFT计算结果如下图所示：</span></p>
+<p><span style="font-family:Menlo; font-size:13px"><img src="http://img.blog.csdn.net/20150706152533596" alt=""><br>
+</span></p>
+<p style="margin-top:0px; margin-bottom:0px; font-size:11px; font-family:'Heiti SC Light'">
+<span style="font-family:Menlo"><strong><br>
+</strong></span></p>
+<p style="margin-top:0px; margin-bottom:0px; font-size:11px; font-family:'Heiti SC Light'">
+<span style="font-family:Menlo"><strong>复制一遍：</strong></span></p>
+<p style="margin-top:0px; margin-bottom:0px; font-size:11px; font-family:'Heiti SC Light'">
+<span style="font-family:Menlo"><strong>FFT</strong></span><strong>，</strong><span style="font-family:Menlo"><strong>8</strong></span><strong>点计算结果</strong></p>
+<p style="margin-top:0px; margin-bottom:0px; font-size:11px; font-family:Menlo"><strong>0.553733 &#43; 0.000000i &nbsp; 2.394647 - 2.097012i &nbsp; -1.386684 &#43; 0.915560i &nbsp; -0.881042 &#43; 0.280414i &nbsp; -0.807574 &#43; 0.000000i &nbsp; -0.881042 - 0.280414i &nbsp; -1.386684 - 0.915560i &nbsp; 2.394647
+ &#43; 2.097012i&nbsp; &nbsp;</strong></p>
+<p style="margin-top:0px; margin-bottom:0px; font-size:11px; font-family:'Heiti SC Light'">
+<span style="font-family:Menlo"><strong>FFT</strong></span><strong>，</strong><span style="font-family:Menlo"><strong>16</strong></span><strong>点计算结果</strong></p>
+<p style="margin-top:0px; margin-bottom:0px; font-size:11px; font-family:Menlo"><strong>0.553733 &#43; 0.000000i &nbsp; 1.431957 &#43; 0.493527i &nbsp; 2.394647 - 2.097012i &nbsp; -1.786256 - 2.899550i &nbsp; -1.386684 &#43; 0.915560i &nbsp; 0.105162 - 0.495158i &nbsp; -0.881042 &#43; 0.280414i &nbsp; 0.249137
+ - 0.129291i &nbsp; -0.807574 &#43; 0.000000i &nbsp; 0.249137 &#43; 0.129291i &nbsp; -0.881042 - 0.280414i &nbsp; 0.105162 &#43; 0.495158i &nbsp; -1.386684 - 0.915560i &nbsp; -1.786256 &#43; 2.899551i &nbsp; 2.394647 &#43; 2.097012i &nbsp; 1.431957 - 0.493527i&nbsp; &nbsp;</strong></p>
+<p style="margin-top:0px; margin-bottom:0px; font-size:11px; font-family:'Heiti SC Light'">
+<span style="font-family:Menlo"><strong>FFT</strong></span><strong>，</strong><span style="font-family:Menlo"><strong>4</strong></span><strong>点计算结果</strong></p>
+<p style="margin-top:0px; margin-bottom:0px; font-size:11px; font-family:Menlo"><strong>1.891888 &#43; 0.000000i &nbsp; -0.909297 - 0.700351i &nbsp; -0.073294 &#43; 0.000000i &nbsp; -0.909297 &#43; 0.700351i&nbsp; &nbsp;</strong></p>
+<p style="margin-top:0px; margin-bottom:0px; font-size:11px; font-family:'Heiti SC Light'">
+<span style="font-family:Menlo"><strong>FFT</strong></span><strong>，</strong><span style="font-family:Menlo"><strong>13</strong></span><strong>点计算结果</strong></p>
+<p style="margin-top:0px; margin-bottom:0px; font-size:11px; font-family:Menlo"><strong>0.553733 &#43; 0.000000i &nbsp; 1.898167 &#43; 0.288124i &nbsp; 0.803761 - 3.465451i &nbsp; -2.328951 &#43; 0.137430i &nbsp; 0.200269 - 0.367077i &nbsp; -0.688243 &#43; 0.477332i &nbsp; -0.161869 - 0.528187i &nbsp; -0.161868
+ &#43; 0.528186i &nbsp; -0.688245 - 0.477332i &nbsp; 0.200271 &#43; 0.367075i &nbsp; -2.328952 - 0.137428i &nbsp; 0.803762 &#43; 3.465451i &nbsp; 1.898167 - 0.288123i&nbsp; &nbsp;</strong></p>
+<p style="margin-top:0px; margin-bottom:0px; font-size:11px; font-family:'Heiti SC Light'">
+<span style="font-family:Menlo"><strong>FFT</strong></span><strong>，</strong><span style="font-family:Menlo"><strong>6</strong></span><strong>点计算结果</strong></p>
+<p style="margin-top:0px; margin-bottom:0px; font-size:11px; font-family:Menlo"><strong>0.176162 &#43; 0.000000i &nbsp; -0.276095 - 3.002073i &nbsp; 0.123599 - 0.116304i &nbsp; 0.128828 &#43; 0.000000i &nbsp; 0.123600 &#43; 0.116302i &nbsp; -0.276092 &#43; 3.002073i&nbsp; &nbsp;</strong></p>
+<p style="margin-top:0px; margin-bottom:0px; font-size:11px; font-family:Menlo"><strong>FFT</strong><span style="font-family:'Heiti SC Light'"><strong>，</strong></span><strong>128</strong><span style="font-family:'Heiti SC Light'"><strong>点计算结果</strong></span></p>
+<p style="margin-top:0px; margin-bottom:0px; font-size:11px; font-family:Menlo"><strong>0.699691 &#43; 0.000000i &nbsp; 0.704772 &#43; 0.010352i &nbsp; 0.719298 &#43; 0.021364i &nbsp; 0.739474 &#43; 0.033697i &nbsp; 0.749607 &#43; 0.047746i &nbsp; 0.679161 &#43; 0.061398i &nbsp; 0.105405 &#43; 0.050647i &nbsp; -6.945906
+ - 0.423135i &nbsp; 54.641422 &#43; 5.062080i &nbsp; -57.156776 - 6.630915i &nbsp; 9.187446 &#43; 1.338868i &nbsp; 0.342783 &#43; 0.093026i &nbsp; -0.288066 - 0.020889i &nbsp; -0.353394 - 0.043726i &nbsp; -0.328844 - 0.047995i &nbsp; -0.290196 - 0.047167i &nbsp; -0.253328 - 0.044825i &nbsp; -0.221405 - 0.042109i &nbsp; -0.194470
+ - 0.039423i &nbsp; -0.171855 - 0.036897i &nbsp; -0.152811 - 0.034570i &nbsp; -0.136679 - 0.032440i &nbsp; -0.122920 - 0.030495i &nbsp; -0.111105 - 0.028715i &nbsp; -0.100891 - 0.027084i &nbsp; -0.092007 - 0.025581i &nbsp; -0.084229 - 0.024193i &nbsp; -0.077390 - 0.022905i &nbsp; -0.071342 - 0.021706i &nbsp; -0.065971
+ - 0.020587i &nbsp; -0.061182 - 0.019537i &nbsp; -0.056895 - 0.018550i &nbsp; -0.053044 - 0.017619i &nbsp; -0.049575 - 0.016737i &nbsp; -0.046441 - 0.015901i &nbsp; -0.043601 - 0.015106i &nbsp; -0.041024 - 0.014347i &nbsp; -0.038679 - 0.013621i &nbsp; -0.036542 - 0.012927i &nbsp; -0.034593 - 0.012260i &nbsp; -0.032808
+ - 0.011617i &nbsp; -0.031181 - 0.010997i &nbsp; -0.029686 - 0.010398i &nbsp; -0.028318 - 0.009818i &nbsp; -0.027066 - 0.009256i &nbsp; -0.025917 - 0.008710i &nbsp; -0.024865 - 0.008177i &nbsp; -0.023903 - 0.007660i &nbsp; -0.023024 - 0.007153i &nbsp; -0.022220 - 0.006657i &nbsp; -0.021489 - 0.006172i &nbsp; -0.020825
+ - 0.005695i &nbsp; -0.020224 - 0.005227i &nbsp; -0.019682 - 0.004767i &nbsp; -0.019197 - 0.004313i &nbsp; -0.018766 - 0.003867i &nbsp; -0.018383 - 0.003419i &nbsp; -0.018055 - 0.002986i &nbsp; -0.017772 - 0.002551i &nbsp; -0.017534 - 0.002121i &nbsp; -0.017342 - 0.001693i &nbsp; -0.017193 - 0.001268i &nbsp; -0.017087
+ - 0.000845i &nbsp; -0.017025 - 0.000423i &nbsp; -0.017003 &#43; 0.000000i &nbsp; -0.017025 &#43; 0.000422i &nbsp; -0.017087 &#43; 0.000845i &nbsp; -0.017193 &#43; 0.001268i &nbsp; -0.017342 &#43; 0.001693i &nbsp; -0.017534 &#43; 0.002121i &nbsp; -0.017772 &#43; 0.002551i &nbsp; -0.018055 &#43; 0.002986i &nbsp; -0.018383 &#43; 0.003425i &nbsp; -0.018766
+ &#43; 0.003866i &nbsp; -0.019197 &#43; 0.004314i &nbsp; -0.019682 &#43; 0.004767i &nbsp; -0.020224 &#43; 0.005227i &nbsp; -0.020825 &#43; 0.005695i &nbsp; -0.021489 &#43; 0.006172i &nbsp; -0.022220 &#43; 0.006656i &nbsp; -0.023024 &#43; 0.007153i &nbsp; -0.023902 &#43; 0.007659i &nbsp; -0.024865 &#43; 0.008177i &nbsp; -0.025917 &#43; 0.008710i &nbsp; -0.027066
+ &#43; 0.009256i &nbsp; -0.028318 &#43; 0.009818i &nbsp; -0.029686 &#43; 0.010398i &nbsp; -0.031179 &#43; 0.010998i &nbsp; -0.032808 &#43; 0.011617i &nbsp; -0.034592 &#43; 0.012259i &nbsp; -0.036542 &#43; 0.012927i &nbsp; -0.038679 &#43; 0.013621i &nbsp; -0.041024 &#43; 0.014347i &nbsp; -0.043601 &#43; 0.015106i &nbsp; -0.046441 &#43; 0.015901i &nbsp; -0.049574
+ &#43; 0.016737i &nbsp; -0.053044 &#43; 0.017619i &nbsp; -0.056894 &#43; 0.018549i &nbsp; -0.061182 &#43; 0.019537i &nbsp; -0.065971 &#43; 0.020587i &nbsp; -0.071342 &#43; 0.021706i &nbsp; -0.077390 &#43; 0.022905i &nbsp; -0.084229 &#43; 0.024193i &nbsp; -0.092005 &#43; 0.025579i &nbsp; -0.100891 &#43; 0.027084i &nbsp; -0.111107 &#43; 0.028715i &nbsp; -0.122921
+ &#43; 0.030496i &nbsp; -0.136679 &#43; 0.032441i &nbsp; -0.152811 &#43; 0.034570i &nbsp; -0.171855 &#43; 0.036897i &nbsp; -0.194470 &#43; 0.039423i &nbsp; -0.221401 &#43; 0.042109i &nbsp; -0.253328 &#43; 0.044825i &nbsp; -0.290195 &#43; 0.047166i &nbsp; -0.328844 &#43; 0.047996i &nbsp; -0.353394 &#43; 0.043726i &nbsp; -0.288066 &#43; 0.020889i &nbsp; 0.342783
+ - 0.093026i &nbsp; 9.187446 - 1.338871i &nbsp; -57.156776 &#43; 6.630923i &nbsp; 54.641422 - 5.062086i &nbsp; -6.945903 &#43; 0.423136i &nbsp; 0.105404 - 0.050648i &nbsp; 0.679161 - 0.061398i &nbsp; 0.749607 - 0.047746i &nbsp; 0.739474 - 0.033698i &nbsp; 0.719298 - 0.021364i &nbsp; 0.704768 - 0.010354i&nbsp;</strong></p>
+<p style="margin-top:0px; margin-bottom:0px; font-size:11px; font-family:Menlo"><strong></strong></p>
+<p>测试结果显示：iOS程序与MATLAB程序运算结果一致，但是MATLAB运算效率高。以下是多次比较求平均后的时间&#20540;</p>
+<p><img src="http://img.blog.csdn.net/20150706153749407" alt=""><br>
+</p>
+<p><br>
+</p>
+<p>为了更直观的观察，将其他的信号（几个信号叠加后的信号）通过fft计算后并作频域处理导入matlab，绘制图如下：</p>
+<p><img src="http://img.blog.csdn.net/20150706153958236" alt=""><br>
+</p>
+<p><img src="http://img.blog.csdn.net/20150706154009976" alt=""><br>
+</p>
+<p><br>
+</p>
+<p>===================================================================</p>
+<p>OK，FFT随笔一份，方便自己以后查阅。其中一定会有很多不足，望路过的大神订正。谢过</p>
+<p><br>
+</p>
+<p><br>
+</p>
+
+				<div class="divmark"></div>
+			</div>
+			<div class="divcodes">
+				<div class="pmores">
+					<a href="">展开更多<i class="fa fa-caret-down"></i></a>
+				</div>
+			</div>
+			<div class="pinfortext">
+				<a href="http://blog.csdn.net/shengzhadon/article/details/46737517" target="_blank">查看原文>></a>
+				<span>
+					
+					<a href="javascript:void(0)" id="click_logo" title="喜欢">
+						<span><i class="fa fa-heart-o" id="support_logo"></i></span>
+						<em>3</em>
+					</a>
+					
+				</span>
+			</div>
+
+			<div class="divcontent bordertop">
+				<span class="title">看过本文的人也看了：</span>
+				<ul class="clearfix">
+					
+						
+						<li>
+							<a class="yellow" href="http://lib.csdn.net/base/vras/structure" target="_blank" title="语音识别与合成知识结构图">
+								<i class="cirle"></i>
+								语音识别与合成知识结构图
+							</a>
+						</li>
+						
+					
+						
+						<li>
+							<div class="csdn-tracking-statistics" data-mod="popu_248_lib_88">
+								<a baseName="vras" knId="2053" contentId="61825" href="http://lib.csdn.net/article/vras/61825" target="_blank" title="[数字信号处理]IIR滤波器的间接设计（C代码）">
+									<i class="cirle"></i>
+									[数字信号处理]IIR滤波器的间接设计（...
+								</a>
+							</div>
+						</li>
+						
+					
+						
+						<li>
+							<div class="csdn-tracking-statistics" data-mod="popu_248_lib_88">
+								<a baseName="vras" knId="2053" contentId="61845" href="http://lib.csdn.net/article/vras/61845" target="_blank" title="[数字信号处理]单位冲击响应与频响以及FIR实现代码（C语言）">
+									<i class="cirle"></i>
+									[数字信号处理]单位冲击响应与频响以及...
+								</a>
+							</div>
+						</li>
+						
+					
+						
+						<li>
+							<div class="csdn-tracking-statistics" data-mod="popu_248_lib_88">
+								<a baseName="vras" knId="2053" contentId="61843" href="http://lib.csdn.net/article/vras/61843" target="_blank" title="[数字信号处理]相位特性解卷绕">
+									<i class="cirle"></i>
+									[数字信号处理]相位特性解卷绕
+								</a>
+							</div>
+						</li>
+						
+					
+						
+						<li>
+							<div class="csdn-tracking-statistics" data-mod="popu_248_lib_88">
+								<a baseName="vras" knId="2053" contentId="61846" href="http://lib.csdn.net/article/vras/61846" target="_blank" title="定点计算与浮点计算">
+									<i class="cirle"></i>
+									定点计算与浮点计算
+								</a>
+							</div>
+						</li>
+						
+					
+						
+						<li>
+							<div class="csdn-tracking-statistics" data-mod="popu_248_lib_88">
+								<a baseName="vras" knId="2053" contentId="61828" href="http://lib.csdn.net/article/vras/61828" target="_blank" title="现代数字信号处理:参数谱估计">
+									<i class="cirle"></i>
+									现代数字信号处理:参数谱估计
+								</a>
+							</div>
+						</li>
+						
+					
+				</ul>
+				<div class="clearfix">
+				</div>
+			</div>
+		</div>
+		<div class="comments">
+			<div class="commentdiv">
+				<a name="focustext" id="focustext"></a>
+				<span class="title01">发表评论</span>
+				<div class="textdiv">
+					<textarea placeholder="输入评论内容"></textarea>
+				</div>
+				<div class="subdiv">
+					
+					<input type="submit" value="发表" onclick="toPassport();return false;"></a>
+					
+				</div>
+			</div>
+			<div class="replaydiv">
+				<p class="ptitles">
+					<em>0</em>个评论
+				</p>
+				<ul class="listreplays clearfix bottomxian" id="comment_list">
+					
+<script>
+	$('.replaybtns').click(function(e){
+		$(this);
+	})
+</script>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div class="fixedyjfk dynamicollect">
+		
+		
+		<div class="fxd">
+			<a href="javascript:void(0);" class="fx fxh"></a>
+			<div class="wicon moveshow kl_spread">
+				<div class="bdsharebuttonbox">
+					<a class="weibo  bds_tsina bds_mid fa fa-weibo wb" data-cmd="tsina"></a>
+					<a class="weixin bds_weixin bds_mid fa fa-weixin wx" data-cmd="weixin"></a>
+				</div>
+				<script>
+	                window._bd_share_config = {
+	                    common: {
+	                        bdText: '数字信号处理公式变程序（一）——DFT、FFT \n' + '【语音识别与合成知识库 - 信号处理 - 数字信号处理】\n' + 'CSDN知识库，你身边的技术百科全书',
+	                        bdDesc: '数字信号处理公式变程序（一）——DFT、FFT',
+	                        bdUrl: window.location.href,
+	                        bdPic : 'http://img.knowledge.csdn.net/upload/base/1490587425183_183.jpg'
+	                    },
+	                    share: [{
+	                        "bdSize": 32
+	                    }]
+	                }
+	                window._bd_share_main = 0;
+	                with (document)0[(getElementsByClassName('kl_spread')[0]).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion=' + ~(-new Date() / 36e5)];
+	            </script>
+			</div>
+		</div>
+		<a href="" class="coment"></a>
+		
+			<a href="" data-id="18985-88-2053-3" class="editbook triggerlayer collectbtn" title="添加收藏"></a>
+		
+		<a href="" class="zd"></a>
+	</div>
+</div>
+
+<div class="windowLayer windowLayerwh borders library leavemessage"><div class="windowContent"><div class="leavewrap"><div class="layeropt"><div class="layer02top"><em>我要留言</em><a href=""class="closec">×</a></div><div class="layercontent"><div class="layerwrap"><p>技术领域：</p><textarea value=""placeholder="请输入20字以内技术领域描述..."id="textarea"></textarea><span class="error"><i class="fa fa-warning"></i><em></em></span></div></div><div class="layerbottom"><a href=""class="subtj">提交</a><a href=""class="cancelbtn">取消</a></div></div></div></div></div>
+<div class="windowLayer windowLayerwh borders library leavemessageinfor"><div class="windowContent"><div class="leavewrap"><div class="layeropt"><div class="layer02top"><em>我要留言</em><a href=""class="closec">×</a></div><div class="layercontent"><div class="layerwrap"><p class="infor"><i class="fa fa-check-circle"></i>留言成功，我们将在审核后加至投票列表中！</p></div></div></div></div></div></div><!--留言弹框调用 END-->
+<div class="windowLayer windowLayerwh kn_sub_collect"><div class="windowContent"><div class="layeropt"><div class="layer02top"><em>收藏提示</em><a href=""class="closec">×</a></div><div class="layercontent"><div class="layerwrap"><div class="collectwrap"><div class="checkradiro clearfix"></div></div><div class="suballbtns"><a href="http://lib.csdn.net/collection"class="confrim_btn">确定收藏</a><a href="http://lib.csdn.net/my/create/structure"class="add_btn" target="_blank">新建图谱</a></div></div></div></div></div></div>
+<div class="windowLayer windowLayerwh borders collectcancel editcollects"style="display: none;"><div class="windowContent"><div class="layer02"><a href=""class="closec">×</a><div class="layer02top"><em>取消收藏</em></div><div class="layercontent"><div class="layertop noborder"><i class="fa fa-question-circle"></i><em>确定要取消收藏吗？</em></div><div class="lastbtns"><a href=""class="addbtn addconfrim">确认</a><a href=""class="cancelbtn">取消</a></div></div></div></div></div>
+<div class="windowLayer windowLayerwh collectNewLayer"><div class="windowContent"><div class="layeropt"><div class="layer02top"><em>提示</em><a href=""class="closec">x</a></div><div class="layercontent"><div class="layerwrap"><p class="infor"><span>语音识别与合成知识库已成功保存至<a href="">我的图谱</a></span><em>现在你可以用它来管理自己的知识内容了</em></p></div></div></div></div></div>
+<div class="windowLayer windowLayerwh deletemaplayer"><div class="windowContent"><div class="layeropt"><div class="layer02top"><em>删除图谱提示</em><a href=""class="closec">&times</a></div><div class="layercontent"><div class="layerwrap"><div class="deletemapwrap"><p>你保存在该图谱下的知识内容也会被删除，建议你先将内容移到其他图谱中。你确定要删除知识图谱及其内容吗？</p></div><div class="pbottom"><a href=""class="delbutn addconfrim">删除</a><a href=""class="resetbtn cancelbtn">取消</a></div></div></div></div></div></div>
+<div class="windowLayer windowLayerwh deletemaplayerall"><div class="windowContent"><div class="layeropt"><div class="layer02top"><em>删除节点提示</em><a href=""class="closec">&times</a></div><div class="layercontent"><div class="layerwrap"><div class="deletemapwrap"><p>无法删除该知识节点，因该节点下仍保存有相关知识内容！</p></div><div class="pbottom"><a href=""class="confrimbutn cancelbtn">确定</a><a href=""class="resetbtn cancelbtn">取消</a></div></div></div></div></div></div>
+<div class="windowLayer windowLayerwh deletemaplayersimple"><div class="windowContent"><div class="layeropt"><div class="layer02top"><em>删除节点提示</em><a href=""class="closec">&times</a></div><div class="layercontent"><div class="layerwrap"><div class="deletemapwrap"><p>你确定要删除该知识节点吗？</p></div><div class="pbottom"><a href=""class="delbutn addconfrim">删除</a><a href=""class="resetbtn cancelbtn">取消</a></div></div></div></div></div></div>
+<script>
+    //==========分享到微博微信============
+    with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    //==========分享到微博微信 End============
+</script>
+
+<script>
+	if(typeof localStorage !== 'undefined' && typeof JSON !== 'undefined') {
+	    var supportHistory = new ViewHistory();
+	    supportHistory.init({
+	        limit: 1000,
+	        storageKey: 'supportHistory',
+	        primaryKey: 'id'
+	    });
+	}
+
+	var contentId = 18985;
+	if(supportHistory && !false) {
+		var histories = supportHistory.getHistories();
+		if(histories && histories.length > 0) {
+			if(histories.indexOf(contentId) != -1){
+				// 支持图标变化
+				$("#click_logo").addClass("clickbtn");
+				$("#support_logo").attr("class","fa fa-heart");
+			}
+		}
+	}
+	function toPassport(){
+		var _url = "http://passport.csdn.net/account/login?from=" + encodeURI(location.href);
+		window.location = _url;
+	}
+	//点击回复 评论框显示 再次点击 隐藏s
+	function showOrHide(_obj){
+			var _replayinfor = $(_obj).parent().siblings('.replayinfor');
+			if(_replayinfor.css('display') === 'block'){
+				_replayinfor.hide();
+			}
+			else{
+				$('.replayinfor').hide();
+				_replayinfor.show();
+			}
+	//		e.stopPropagation();
+			return false;
+	}
+	$("#click_logo").click(function(){
+		support();
+	})
+//	$('.fa-heart-o').click(function(){
+//		support();
+//	});
+
+	function support(){
+		var _url = "http://lib.csdn.net/article/support";
+		var count = $('#support').val();
+		var contentId = $('#contentId').val();
+		var knowledgeId = parseInt($('a.editbook').attr('data-id').split('-')[2]);
+		var _getCookieValue = csdn.knowledge_web._getCookieValue;
+		var username = _getCookieValue('UserName');
+		var status = false; // 可支持
+		if(supportHistory) {
+			var histories = supportHistory.getHistories();
+			if(histories && histories.length > 0) {
+				if(histories.indexOf(contentId) != -1 && !username){
+					status = true;  // 已支持过
+				}
+			}
+		}
+		if(!status){
+			$.ajax({
+				type: "POST",
+	          	url: _url,
+	          	data:{
+	             	contentId: $('#contentId').val(),
+					knowledgeId: knowledgeId
+	          	},
+	          	error: function(data) {
+	          		alert(JSON.stringify(data));
+	          	},
+	          	success: function(data) {
+	            	if(data.status){
+	            		if(!data.username){
+	            			supportHistory.addHistory($('#contentId').val());
+	            		}
+	            		count = parseInt(count) + 1;
+	            		$(".main .mainread .maincontent .pinfortext a em").first().text(count);
+						$('#support').val(count);
+						$("#click_logo").addClass("clickbtn");
+						$("#support_logo").attr("class","fa fa-heart");
+	              	}else{
+	                  	//alert(data.error);
+	              	}
+	          	}
+	      	});
+		}
+	}
+	function setComment(_obj){
+		var login = csdn.knowledge_web._verificaUser();
+		if(login) {
+			var count = parseInt('0');
+			var _obj = _obj;
+			var _url = "http://lib.csdn.net/comment/set";
+			var article = $('#sourceId').val();
+			var collectBtn = $("a.editbook");
+			var contentId = collectBtn.attr('data-id').split('-')[0];
+			var knowledgeId = collectBtn.attr('data-id').split('-')[2];
+
+			var owner = 'shengzhadon';
+			var parentId = $(_obj).attr('parent_id') || '';
+			//评论,直接回复博主不做修改,评论回复添加[reply]
+			var content = parentId ? '[reply]' + $(_obj).attr('parent_name') + '[/reply]' + $(_obj).parent().siblings().find('textarea').val() : $(_obj).parent().siblings().find('textarea').val();
+			var con_length = parentId ? content.split('[/reply]')[1].length : content.length;
+			if (!con_length) {
+				//TODO:评论为空的操作
+				alert('评论不得为空!');
+				return false;
+			}
+			else if (content.length > 1000) {
+				alert('评论字数过长,应维持在1000字符以内!');
+				//TODO:评论字数大于1000的操作
+				return false;
+			}
+			var commentContainer = document.getElementById('comment_list');//整个评论部分
+			var oLi = commentContainer.getElementsByTagName('li');////整个评论部分的li列表
+			//回复博主回复框不隐藏,else隐藏
+			if (!parentId)
+			//回复博主的按钮点击后,textarea置空
+				$(_obj).parent().siblings('.textdiv').find('textarea').val('');
+			else
+			//回复评论的按钮点击后,评论框隐藏,textarea置空
+				$(_obj).parents('.replayinfor').hide()
+						.find('textarea').val('');
+			$.ajax({
+				type: "GET",
+				url: _url,
+				data: {
+					article: article,
+					content: content,
+					parentid: parentId,
+					contentId: contentId,
+					owner: owner,
+					knowledgeId: knowledgeId
+				},
+				error: function (data) {
+					alert(JSON.stringify(data.error));
+				},
+				success: function (data) {
+					if (data.status) {
+						var newli = data.data;
+						var newComment = document.createElement('li');
+						//直接评论博主
+						if (!parentId) {
+							$(newComment).addClass('clearfix');
+							newComment.innerHTML = '<a class="photos" href="http://my.csdn.net/' + newli.username + '" target="_blank"><img src="' + newli.avatar + '" alt="" width="50" height="50"></a>'
+									+ '<div class="text"><a href="http://my.csdn.net/' + newli.username + '" target="_blank">' + newli.username + '</a>'
+									+ '<p class="pcontent">' + content + '</p>'
+									+ '<p class="editext clearfix"><span class="date">' + newli.create_at + '</span>'
+									+ '<a href="javascript:void(0)" parent_id="' + newli.id + '"  onclick="showOrHide(this);return false;">回复</a></p>'
+									+ '<div class="replayinfor" style="display: none;">'
+									+ '<div class="replaydiv"><div class="jiao"></div><textarea></textarea></div>'
+									+ '<div class="replaybtn"><button class="replaybtns"  parent_name="' + newli.username + '" parent_id="' + newli.id + '"  onclick="setComment(this)">回复</button></div></div></div>';
+							//还没有人评论博主
+							if (oLi.length == 0) {
+								$(commentContainer).append(newComment);
+							}
+							//已经有评论了
+							else {
+								commentContainer.insertBefore(newComment, oLi[0]);
+							}
+						}
+						//回复评论 在oLi中 没有replayli class 且子元素或自身parent_id属性为parentId元素的元素
+						else {
+							//增加回复评论的li的class
+							$(newComment).addClass('replayli clearfix');
+							var _length = 0, upstair, _a_list;
+							_a_list = $('li.clearfix > div > p > a');
+							for (var i in _a_list) {
+								if ($(_a_list[i]).attr('parent_id') === parentId) {
+									//被回复的评论
+									upstair = $(_a_list[i]).parents('li');
+									break;
+								}
+							}
+							//被回复的评论后面是否还有直接回复博主的评论
+							if (upstair.length > 0) _length = $(upstair).nextAll('li:not(.replayli)').length;
+							newComment.innerHTML = '<a class="photos" href="http://my.csdn.net/' + newli.username + '" target="_blank"><img src="' + newli.avatar + '" alt="" width="50" height="50"></a>'
+									+ '<div class="text subtext"><a href="http://my.csdn.net/' + newli.username + '" target="_blank">' + newli.username + '</a>'
+									+ '<p class="pcontent"><em>回复<i>' + $(upstair).find('div.text > a').text() + '：</i></em>' + content.split('[/reply]')[1] + '</p>'
+									+ '<p class="editext clearfix"><span class="date">' + newli.create_at + '</span>'
+									+ '<a href="javascript:void(0)" parent_id="' + newli.id + '"  onclick="showOrHide(this);return false;">回复</a></p>'
+									+ '<div class="replayinfor" style="display: none;"><div class="replaydiv"><div class="jiao"></div>'
+									+ '<textarea></textarea></div><div class="replaybtn">'
+									+ '<button class="replaybtns"  parent_name="' + newli.username + '" parent_id="' + newli.id + '"  onclick="setComment(this)">回复</button></div></div></div>';
+							//插入新回复操作
+							if (_length > 0) {
+							//在被回复的评论之后的所有没有'replayli'class的li中的第一个之前插入新回复
+								$(upstair).nextAll('li:not(.replayli)').eq(0).before($(newComment));
+							}
+							else {
+								//在本条被回复的评论之后没有直接评论博主的评论,直接用append方法插入新回复
+								$(commentContainer).append(newComment);
+
+							}
+						}
+						count = parseInt(count) + 1;
+						$(".main .mainread .comments .replaydiv .ptitles em").first().text(count);
+					} else {
+						alert(data.error);
+					}
+				}
+			})
+		}
+	}
+
+	$('.loadingmore').click(function(){
+	    _commentLoad(this);
+	});
+
+	function _commentLoad(event){
+		var _url = "http://lib.csdn.net/comment/loading";
+		var current = $('#page').val();
+		var page = parseInt(current)+1;
+		$.ajax({
+			type: "POST",
+          	url: _url,
+          	data:{
+            	page : page,
+             	size : $('#size').val(),
+             	contentId: $('#contentId').val(),
+             	sourceId: $('#sourceId').val(),
+             	owner: $('#owner').val()
+          	},
+          	error: function(data) {
+          		alert(JSON.stringify(data));
+          	},
+          	success: function(data) {
+            	if(data.status){
+            		if(!data.more){
+            			event.remove();
+            		}
+                  	$("#comment_list").append(data.html);
+                  	$('#page').val(data.page);
+              	}else{
+                  	//alert(data.error);
+              	}
+          	}
+      	});
+	}
+	//阅读页，点击“展开”全部显示
+	$(function(){
+		if($(".divtexts")[0].scrollHeight > 1800) {
+			$('.divtexts').css('max-height', '1600px')
+					.find('.divmark').show();
+			$('.divcodes').show();
+
+		}
+		$('.pmores').click(function (e) {
+			$('.divtexts').css('max-height', '100%')
+					.find('.divmark').hide();
+			$('.divcodes').remove();
+			e.stopPropagation();
+			return false;
+		});
+
+		if($(".fine.addfine").length>0){
+			doTooltip();
+
+			$(".fine.addfine").on("click",function(e) {
+				var This = $(this);
+				if(This.hasClass("isfine")){
+					doElite(0,This);
+				}
+				else{
+					doElite(1,This);
+				}
+			});
+
+			function doElite(action,obj){
+				var _url;
+				if(action){
+					_url = "/manager/doElite";
+				}
+				else{
+					_url = "/manager/cancelElite";
+				}
+				var cId = $('#contentId').val();
+				$.ajax({
+					type: "get",
+					url: _url,
+					data:{
+						cId:cId,
+						baseId:parseInt('88'),
+						knId:parseInt('2053'),
+						action:action
+					},
+					error: function(data) {
+						alert(JSON.stringify(data));
+					},
+					success: function(data) {
+						if(data.status){
+							if(action){
+								obj.addClass("isfine").attr("title","取消加精");
+								doTooltip(2);
+							}
+							else{
+								obj.removeClass("isfine").attr("title","文章加精");
+								doTooltip(1);
+							}
+						}
+						else{
+							//alert(data.error);
+						}
+					}
+
+				})
+
+
+			}
+			function doTooltip(action) {
+				if(!action) {
+					$(".addfine").tooltip({
+						hide: {
+							effect: "explode",
+							delay: 200
+						},
+						position: {
+							my: "left center",
+							at: "right+5 center"
+						},
+						open: function (event, ui) {
+							ui.tooltip.animate({top: ui.tooltip.position().top}, "fast");
+						}
+					});
+				}
+				else if(action == 1) {
+					$(".addfine:not(.isfine)").tooltip({
+						items: "[title]",
+						content: "文章加精"
+					})
+				}else {
+					$(".addfine.isfine").tooltip({
+						items: "[title]",
+						content: "取消加精"
+					})
+				}
+			}
+		}
+	})
+	//阅读页　每次展开一部分
+//	$(function(){
+//		if($(".divtexts")[0].scrollHeight > 4000) {
+//			$('.divtexts').css('max-height', '3200px')
+//			.find('.divmark').show();
+//			$('.divcodes').show();
+//
+//		}
+//		$('.pmores').click(function (e) {
+//			$('.divtexts').animate({'max-height':'+=5000px'},600);
+//			var maxHeight = parseInt($('.divtexts').css('max-height').split('px')[0]);
+//			if(maxHeight >= ($(".divtexts")[0].scrollHeight-4000)){
+//				$('.divtexts').animate({'max-height':'100%'},600).find('.divmark').hide("slow");
+//				$('.divcodes').remove();
+//			}
+//
+//			e.stopPropagation();
+//			return false;
+//		});
+//	})
+//	function toPassport(){
+//		location.href = "http://passport.csdn.net/?backurl=" + location.href;
+//	}
+</script>
+
+<script>
+	//markdown
+	$('.divtexts pre.prettyprint code').each(function () {
+		var lines = $(this).text().split('\n').length;
+		var $numbering = $('<ul/>').addClass('pre-numbering').hide();
+		$(this).addClass('has-numbering').parent().append($numbering);
+		for (i = 1; i <= lines; i++) {
+		  $numbering.append($('<li/>').text(i));
+		};
+		$numbering.fadeIn(1700);
+	});
+	//code
+	SyntaxHighlighter.defaults['toolbar'] = false;  //去掉右上角问号图标
+	SyntaxHighlighter.all();
+</script>
+
+<!--阅读页相关事件-->
+<!--
+     can used in article/article.ejs,snippet/snippet.ejs
+-->
+<script>
+    var t = null;
+    $(".fixedyjfk").css({"left":($(".mainread").innerWidth()+$(".mainread").offset().left+10)});
+    $(window).on('resize',function(){
+        $(".fixedyjfk").css({"left":($(".mainread").innerWidth()+$(".mainread").offset().left+10)});
+    });
+    $(".fx").hover(function(){
+        clearTimeout(t);
+        t = null;
+        $(".fxd").addClass('fxd1');
+        $(".fx").addClass('fxh');
+    },function(){
+        t = setTimeout(function(){
+            $(".fxd").removeClass('fxd1');
+            $(".fx").removeClass('fxh');
+        },1000);
+    });
+    $(".wicon").on('mouseenter',function(){
+        clearTimeout(t);
+        t = null;
+        $(".fxd").addClass('fxd1');
+        $(".fx").addClass('fxh');
+    });
+    $(".wicon").on('mouseleave',function(){
+        $(".fxd").removeClass('fxd1');
+    });
+
+    $(".zd").on('click',function(event){
+        $("body,html").animate({scrollTop:0},'fast');
+        event.stopPropagation();
+        return false;
+    });
+    $(document).on('scroll',scrolls());
+    function scrolls()
+    {
+        var t,doc;
+        doc = $(this);
+        return function(){
+            clearTimeout(t);
+            t=null;
+            t=setTimeout(function(){
+                if(parseFloat(doc.scrollTop(),10)>=400)
+                {
+                    $(".zd").show();
+                }else{
+                    $(".zd").hide();
+                }
+            },100);
+        }
+    }
+    $(".coment,.addAnchor").on('click',function(){
+        if(window.location.href.indexOf('#focustext') != -1){
+            window.location.href = window.location.href;
+        }
+        else{
+            window.location.href=window.location.href+"#focustext"
+        }
+        $(".textdiv textarea").focus();
+        return false;
+    });
+</script>
+<!--微信分享弹层样式-->
+<style>
+    .bdshare-button-style0-32 a{
+        float: none;
+        width:40px;
+        height: 40px;
+        line-height: normal;
+        background:none;
+        cursor: pointer;
+        margin: 0;
+        text-indent: -100em;
+        overflow: auto;
+        color:#8295a3;
+    }
+    .bd_weixin_popup {
+        height: 260px !important;
+    }
+    .bd_weixin_popup_foot {
+        display: none;
+    }
+    .sharebtn span{
+        cursor: pointer;
+    }
+</style>
+<div class="marklayer whitebk"></div>
+<script type="text/javascript" src="http://c.csdnimg.cn/pubfooter/js/publib_footer.js"></script>
+<script type="text/javascript" src="http://c.csdnimg.cn/public/common/toolbar/js/toolbar.js"></script>
+<!--<script type="text/javascript" src="/js/web/knowledge_base_new.js"></script>-->
+<script type="text/javascript" src="/min/knowledge_base_new.min.js"></script>
+
+</body>
+
+
+
+
