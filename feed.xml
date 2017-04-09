@@ -1,17 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-04-08T23:40:30+08:00</updated><id>http://localhost:4000/</id><title type="html">自然进化</title><subtitle>关注AI技术发展和应用的交流平台
-</subtitle><entry><title type="html">人工智能、机器学习与深度学习之间的关系</title><link href="http://localhost:4000/ml/2017/04/08/ai-ml-dl.html" rel="alternate" type="text/html" title="人工智能、机器学习与深度学习之间的关系" /><published>2017-04-08T15:22:47+08:00</published><updated>2017-04-08T15:22:47+08:00</updated><id>http://localhost:4000/ml/2017/04/08/ai-ml-dl</id><content type="html" xml:base="http://localhost:4000/ml/2017/04/08/ai-ml-dl.html">&lt;h1 id=&quot;人工智能机器学习与深度学习之间的关系&quot;&gt;人工智能、机器学习与深度学习之间的关系&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-04-09T23:45:52+08:00</updated><id>http://localhost:4000/</id><title type="html">自然进化</title><subtitle>关注AI技术发展和应用的交流平台
+</subtitle><entry><title type="html">RNN 与 LSTM 专题</title><link href="http://localhost:4000/dl/2017/04/09/rnn-lstm.html" rel="alternate" type="text/html" title="RNN 与 LSTM 专题" /><published>2017-04-09T15:22:47+08:00</published><updated>2017-04-09T15:22:47+08:00</updated><id>http://localhost:4000/dl/2017/04/09/rnn-lstm</id><content type="html" xml:base="http://localhost:4000/dl/2017/04/09/rnn-lstm.html">&lt;h2 id=&quot;目前的一些成果&quot;&gt;目前的一些成果&lt;/h2&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;人工智能(Artificial Intelligence)&lt;/code&gt;是一个最广泛的概念，人工智能的目的就是让计算机这台机器能够象人一样思考。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://karpathy.github.io/2015/05/21/rnn-effectiveness/&quot;&gt;The Unreasonable Effectiveness of Recurrent Neural Networks&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;机器学习(Machine Learning)&lt;/code&gt;是人工智能的分支，专门研究计算机怎样模拟或实现人类的学习行为，以获取新的知识或技能，使之不断改善自身的性能。&lt;/p&gt;
+&lt;h2 id=&quot;rnn&quot;&gt;RNN&lt;/h2&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;深度学习(Deep Learning)&lt;/code&gt;是一种机器学习的方法，它试图使用包含复杂结构或由多重非线性变换构成的多个处理层（神经网络）对数据进行高层抽象的算法。&lt;/p&gt;
+&lt;h2 id=&quot;lstm&quot;&gt;LSTM&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/doc-img/ai-ml-dl.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/a635661820/article/details/45390671&quot;&gt;LSTM简介以及数学推导&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">目前的一些成果</summary></entry><entry><title type="html">深度学习资源汇总</title><link href="http://localhost:4000/dl/2017/04/09/dl-resources.html" rel="alternate" type="text/html" title="深度学习资源汇总" /><published>2017-04-09T14:37:07+08:00</published><updated>2017-04-09T14:37:07+08:00</updated><id>http://localhost:4000/dl/2017/04/09/dl-resources</id><content type="html" xml:base="http://localhost:4000/dl/2017/04/09/dl-resources.html">&lt;h2 id=&quot;综述文章&quot;&gt;综述文章&lt;/h2&gt;
 
-&lt;h2 id=&quot;参考文献&quot;&gt;参考文献&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.csdn.net/article/2015-06-01/2824811&quot;&gt;深度学习-LeCun、Bengio和Hinton的联合综述（上）&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;[1]. &lt;a href=&quot;https://www.zhihu.com/question/30545893/answer/152317466&quot;&gt;深度学习和人工智能之间是什么样的关系&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">人工智能、机器学习与深度学习之间的关系</summary></entry><entry><title type="html">工欲善其事必先利其器——Markdown</title><link href="http://localhost:4000/tools/2017/04/03/makdown-tools.html" rel="alternate" type="text/html" title="工欲善其事必先利其器——Markdown" /><published>2017-04-03T18:54:47+08:00</published><updated>2017-04-03T18:54:47+08:00</updated><id>http://localhost:4000/tools/2017/04/03/makdown-tools</id><content type="html" xml:base="http://localhost:4000/tools/2017/04/03/makdown-tools.html">&lt;h2 id=&quot;写作工具利器markdown&quot;&gt;写作工具利器——Markdown&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.csdn.net/article/2015-06-02/2824825&quot;&gt;深度学习-LeCun、Bengio和Hinton的联合综述（下）&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;书籍&quot;&gt;书籍&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/HFTrader/DeepLearningBook&quot;&gt;DeepLearningBook&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;论文&quot;&gt;论文&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/songrotek/Deep-Learning-Papers-Reading-Roadmap&quot;&gt;Deep-Learning-Papers-Reading-Roadmap&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">综述文章</summary></entry><entry><title type="html">工欲善其事必先利其器——Markdown</title><link href="http://localhost:4000/tools/2017/04/08/makdown-tools.html" rel="alternate" type="text/html" title="工欲善其事必先利其器——Markdown" /><published>2017-04-08T18:54:47+08:00</published><updated>2017-04-08T18:54:47+08:00</updated><id>http://localhost:4000/tools/2017/04/08/makdown-tools</id><content type="html" xml:base="http://localhost:4000/tools/2017/04/08/makdown-tools.html">&lt;h2 id=&quot;写作工具利器markdown&quot;&gt;写作工具利器——Markdown&lt;/h2&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;We believe that writing is about content, about what you want to say – not about fancy formatting.&lt;/p&gt;
@@ -84,4 +92,29 @@ brew install r&lt;/p&gt;
 
 &lt;p&gt;[4]. &lt;a href=&quot;http://www.cnblogs.com/fanzhidongyzby/p/6637084.html&quot;&gt;使用Atom打造无懈可击的Markdown编辑器&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;[5]. &lt;a href=&quot;http://www.yangzhiping.com/tech/r-markdown-knitr.html&quot;&gt;Markdown写作浅谈&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">写作工具利器——Markdown</summary></entry><entry><title type="html">Machine Learning Resources</title><link href="http://localhost:4000/ml/2017/04/03/ml-resources.html" rel="alternate" type="text/html" title="Machine Learning Resources" /><published>2017-04-03T18:54:47+08:00</published><updated>2017-04-03T18:54:47+08:00</updated><id>http://localhost:4000/ml/2017/04/03/ml-resources</id><content type="html" xml:base="http://localhost:4000/ml/2017/04/03/ml-resources.html">&lt;p&gt;&lt;a href=&quot;https://github.com/HFTrader/DeepLearningBook&quot;&gt;DeepLearningBook&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">DeepLearningBook</summary></entry></feed>
+&lt;p&gt;[5]. &lt;a href=&quot;http://www.yangzhiping.com/tech/r-markdown-knitr.html&quot;&gt;Markdown写作浅谈&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">写作工具利器——Markdown</summary></entry><entry><title type="html">人工智能、机器学习与深度学习之间的关系</title><link href="http://localhost:4000/ml/2017/04/08/ai-ml-dl.html" rel="alternate" type="text/html" title="人工智能、机器学习与深度学习之间的关系" /><published>2017-04-08T15:22:47+08:00</published><updated>2017-04-08T15:22:47+08:00</updated><id>http://localhost:4000/ml/2017/04/08/ai-ml-dl</id><content type="html" xml:base="http://localhost:4000/ml/2017/04/08/ai-ml-dl.html">&lt;h1 id=&quot;人工智能机器学习与深度学习之间的关系&quot;&gt;人工智能、机器学习与深度学习之间的关系&lt;/h1&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;人工智能(Artificial Intelligence)&lt;/code&gt;是一个最广泛的概念，人工智能的目的就是让计算机这台机器能够象人一样思考。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;机器学习(Machine Learning)&lt;/code&gt;是人工智能的分支，专门研究计算机怎样模拟或实现人类的学习行为，以获取新的知识或技能，使之不断改善自身的性能。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;深度学习(Deep Learning)&lt;/code&gt;是一种机器学习的方法，它试图使用包含复杂结构或由多重非线性变换构成的多个处理层（神经网络）对数据进行高层抽象的算法。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/doc-img/ai-ml-dl.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;参考文献&quot;&gt;参考文献&lt;/h2&gt;
+
+&lt;p&gt;[1]. &lt;a href=&quot;https://www.zhihu.com/question/30545893/answer/152317466&quot;&gt;深度学习和人工智能之间是什么样的关系&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">人工智能、机器学习与深度学习之间的关系</summary></entry><entry><title type="html">机器学习资源汇总</title><link href="http://localhost:4000/ml/2017/04/03/ml-resources.html" rel="alternate" type="text/html" title="机器学习资源汇总" /><published>2017-04-03T18:54:47+08:00</published><updated>2017-04-03T18:54:47+08:00</updated><id>http://localhost:4000/ml/2017/04/03/ml-resources</id><content type="html" xml:base="http://localhost:4000/ml/2017/04/03/ml-resources.html">&lt;h2 id=&quot;综述文章&quot;&gt;综述文章&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cs.cmu.edu/~tom/pubs/MachineLearning.pdf&quot;&gt;The Discipline of Machine Learning&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf&quot;&gt;A Few Useful Things to Know about Machine Learning&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;书籍&quot;&gt;书籍&lt;/h2&gt;
+
+&lt;p&gt;下面的统计学习方法和机器学习可以一起看，在一本书中的概念觉得不是很清楚的可以到另外一本书同样的专题里再看一遍，由于两个作者的写作逻辑不同，可能你就会瞬间打开思路，明白其中的道理。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://item.jd.com/10975302.html&quot;&gt;统计学习方法, 李航&lt;/a&gt;
+&lt;a href=&quot;https://item.jd.com/11867803.html&quot;&gt;机器学习， 周志华&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;论文&quot;&gt;论文&lt;/h2&gt;</content><author><name></name></author><summary type="html">综述文章</summary></entry></feed>

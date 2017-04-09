@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>工欲善其事必先利其器——Markdown</title>
+  <meta name="description" content="写作工具利器——Markdown">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/tools/2017/04/08/makdown-tools.html">
+  <link rel="alternate" type="application/rss+xml" title="自然进化" href="/feed.xml">
+  
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">自然进化</a>
+
+    <nav class="site-nav">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </span>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">关于</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">工欲善其事必先利其器——Markdown</h1>
+    <p class="post-meta"><time datetime="2017-04-08T18:54:47+08:00" itemprop="datePublished">Apr 8, 2017</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h2 id="写作工具利器markdown">写作工具利器——Markdown</h2>
+
+<blockquote>
+  <p>We believe that writing is about content, about what you want to say – not about fancy formatting.</p>
+
+  <p>我们坚信写作写的是内容，所思所想，而不是花样格式。</p>
+</blockquote>
+
+<p>上面是我们对写作的本质认识。但现实是我们总要依托一定的工具来进行写作，有所见即所得的（What you see is what you get）Windows 里的Microsoft Office，还有唐纳德老爷爷开发的LaTex: What you do is what you get哲学的写作工具。为了两种方式的兼顾，有了支持Latex实时显示效果的一些工具支持。</p>
+
+<p>他们的缺点也显而易见，Windows Office写作时需要作者不断的调整格式，还有不同程度的程序崩溃可能性。Latex虽然语法犀利可以做到写作时用code指定排版，但是它海量高深的语法和各种环境搭建问题使得环境搭建和学习曲线非常的长。</p>
+
+<p>于是Markdown横空出世——Markdown 是一种轻量级的「标记语言」，它实际上是个非常简单、非常容易学习的语法。这个语法简单到每个人都可以在5分钟以内学会。而且又有各种方式可以方便得转换为windows word，html，pdf等格式。可以认为Markdown是对一些复杂语言如LaTex等的又一次升华，就像编程语言一次次的推陈出新。</p>
+
+<blockquote>
+  <p><a href="http://www.jianshu.com/p/1e402922ee32/">Markdown——入门指南</a></p>
+
+  <p><a href="http://wowubuntu.com/markdown/basic.html">Markdown中文版语法说明</a></p>
+
+  <p><a href="http://daringfireball.net/projects/markdown/syntax">创始人 John Gruber 的 Markdown 语法说明</a></p>
+</blockquote>
+
+<p>类似编程语言、HTML语言，你甚至可以在一个纯文本编辑器里用Markdown语法进行文章写作，在最终发表时使用其他工具转换为响应的目标文件格式即可。</p>
+
+<p>说了这么多，Markdown对应的一些工具有什么可以支持我们写作？基本上现在主流的写作需求可以分为两类：</p>
+
+<p>（1）一类是普通文档、图表等的基本需求</p>
+
+<p>（2）一类是有图表、数学公式等的科技写作需求</p>
+
+<p>在我用过的工具中，认为下面两个工具可以很好的满足已上两种需求。在工具选择时自然也考虑了跨平台问题，下面的两种工具对于跨平台支持：Windows、Mac、Linux都有很好的支持。</p>
+
+<h2 id="一--普通文档写作利器markdown--atom">一，  普通文档写作利器：Markdown + Atom</h2>
+
+<p>Atom是github出品的IDE工具，经过几年的发展目前基本上可以和Sublime Text一较高下。但是由于他对于插件的管理感觉笔Sublime Text要方便人性许多，所以我现在基本上倾向于使用Atom。对于上文说的第一类需求普通文档写作和基本图表中的需求，使用Atom然后安装对应的插件即可。可以参考下下面的文章来进行Atom的安装与配置。</p>
+
+<p><a href="http://www.cnblogs.com/fanzhidongyzby/p/6637084.html">使用Atom打造无懈可击的Markdown编辑器</a></p>
+
+<h2 id="二-科技文章写作利器markdown--r">二， 科技文章写作利器：Markdown + R</h2>
+
+<p>在科技文章写作时最多用到的就是数学公式的展现了。对于这种情况LaTex是有自己的语法支持来搞定的，而Markdown的解决之道就是对LaTex公式语法进行兼容。</p>
+
+<p>为了更加方便的实时调试公式与公式对应的图表，一位极其熟悉LaTeX，也熟悉Markdown的国人yihui同学，意识到LaTeX它可以作为最终格式生成。在他的大作——R包中的knitr，提供了Markdown支持。并说服R社区主流编辑器厂家，开源软件RStudio 提供 Markdown支持，从而使得Rmd这种新格式开始流行。我们有幸看到这个重要格式的诞生，国人的贡献如此重要。</p>
+
+<p>在Mac上安装R语言和RStudio如下所示。</p>
+
+<h3 id="1-install-r-language">1. install r language</h3>
+
+<blockquote>
+  <p>brew tap homebrew/science
+brew install r</p>
+</blockquote>
+
+<h3 id="2-download-rstudio-and-install">2. download rstudio and install</h3>
+
+<p>download latest version from the url below:</p>
+
+<blockquote>
+  <p>https://www.rstudio.com/products/rstudio/download/</p>
+</blockquote>
+
+<p>Rstudio等的配置等叙述可以参考： <a href="http://www.yangzhiping.com/tech/r-markdown-knitr.html">Markdown写作浅谈</a></p>
+
+<h2 id="参考">参考</h2>
+
+<p>[1]. <a href="http://www.jianshu.com/p/1e402922ee32/">Markdown——入门指南</a></p>
+
+<p>[2]. <a href="http://wowubuntu.com/markdown/basic.html">Markdown中文版语法说明</a></p>
+
+<p>[3]. <a href="http://daringfireball.net/projects/markdown/syntax">创始人 John Gruber 的 Markdown 语法说明</a></p>
+
+<p>[4]. <a href="http://www.cnblogs.com/fanzhidongyzby/p/6637084.html">使用Atom打造无懈可击的Markdown编辑器</a></p>
+
+<p>[5]. <a href="http://www.yangzhiping.com/tech/r-markdown-knitr.html">Markdown写作浅谈</a></p>
+
+  </div>
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">自然进化</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              自然进化
+            
+            </li>
+            
+            <li><a href="mailto:ziranjinhua@163.com">ziranjinhua@163.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/ziranjinhua"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">ziranjinhua</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>关注AI技术发展和应用的交流平台
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
