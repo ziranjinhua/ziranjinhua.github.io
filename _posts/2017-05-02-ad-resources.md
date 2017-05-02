@@ -23,5 +23,5 @@ categories: ad
 
 ## 开源技术系列
 
-* George Hotz's [Learning a Driving Simulato](https://github.com/commaai/research)
+* George Hotz's [Learning a Driving Simulator](https://github.com/commaai/research)
 
