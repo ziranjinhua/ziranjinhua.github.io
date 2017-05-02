@@ -25,3 +25,7 @@ categories: ad
 
 * George Hotz's [Learning a Driving Simulator](https://github.com/commaai/research)
 
+## 课程系列
+
+* Udacity [自动驾驶课程](https://classroom.udacity.com/courses/cs373)
+
