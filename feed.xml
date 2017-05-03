@@ -1,5 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-05-03T00:42:46+08:00</updated><id>http://localhost:4000/</id><title type="html">自然进化</title><subtitle>关注AI技术发展和应用的交流平台
-</subtitle><entry><title type="html">自动驾驶资源汇总</title><link href="http://localhost:4000/ad/2017/05/02/ad-resources.html" rel="alternate" type="text/html" title="自动驾驶资源汇总" /><published>2017-05-02T23:37:07+08:00</published><updated>2017-05-02T23:37:07+08:00</updated><id>http://localhost:4000/ad/2017/05/02/ad-resources</id><content type="html" xml:base="http://localhost:4000/ad/2017/05/02/ad-resources.html">&lt;h2 id=&quot;百度技术文章&quot;&gt;百度技术文章&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-05-03T23:56:06+08:00</updated><id>http://localhost:4000/</id><title type="html">自然进化</title><subtitle>关注AI技术发展和应用的交流平台
+</subtitle><entry><title type="html">ROS</title><link href="http://localhost:4000/ros/2017/05/03/ros.html" rel="alternate" type="text/html" title="ROS" /><published>2017-05-03T22:37:07+08:00</published><updated>2017-05-03T22:37:07+08:00</updated><id>http://localhost:4000/ros/2017/05/03/ros</id><content type="html" xml:base="http://localhost:4000/ros/2017/05/03/ros.html">&lt;h2 id=&quot;ros-相关介绍&quot;&gt;ROS 相关介绍&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;What is ROS?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The Robot Operating System (ROS) is a set of software libraries and tools that help you build robot applications. From drivers to state-of-the-art algorithms, and with powerful developer tools, ROS has what you need for your next robotics project. And it’s all open source.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;官网: &lt;a href=&quot;http://www.ros.org&quot;&gt;http://www.ros.org&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;新闻: &lt;a href=&quot;http://www.ros.org/news&quot;&gt;http://www.ros.org/news&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Wiki: &lt;a href=&quot;http://wiki.ros.org&quot;&gt;http://wiki.ros.org&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;ROS的各个版本介绍: &lt;a href=&quot;http://wiki.ros.org/Distributions&quot;&gt;http://wiki.ros.org/Distributions&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;ROS支持的操作系统: &lt;a href=&quot;http://wiki.ros.org/ROS/Installation/&quot;&gt;http://wiki.ros.org/ROS/Installation/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;ROS整体介绍：&lt;a href=&quot;https://wenku.baidu.com/view/7d2409c7f01dc281e43af091.html&quot;&gt;ROS基础与架构&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;阅读ros源码&quot;&gt;阅读ROS源码&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://wiki.ros.org/indigo/Installation/Source&quot;&gt;下载ROS源码&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">ROS 相关介绍</summary></entry><entry><title type="html">自动驾驶资源汇总</title><link href="http://localhost:4000/ad/2017/05/02/ad-resources.html" rel="alternate" type="text/html" title="自动驾驶资源汇总" /><published>2017-05-02T23:37:07+08:00</published><updated>2017-05-02T23:37:07+08:00</updated><id>http://localhost:4000/ad/2017/05/02/ad-resources</id><content type="html" xml:base="http://localhost:4000/ad/2017/05/02/ad-resources.html">&lt;h2 id=&quot;百度技术文章&quot;&gt;百度技术文章&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzAwNDI4ODcxNA==&amp;amp;mid=2652244150&amp;amp;idx=1&amp;amp;sn=6b088382b2468f6a2b128f202da7bb74&amp;amp;chksm=80cc9113b7bb18055deecb390628b14fa1b31c056af2f614c4a648ad4299f222e38949557913&amp;amp;scene=21#wechat_redirect&quot;&gt;GPS及惯性传感器在无人驾驶中的应用&lt;/a&gt;&lt;/li&gt;
@@ -21,6 +44,12 @@
 
 &lt;ul&gt;
   &lt;li&gt;George Hotz’s &lt;a href=&quot;https://github.com/commaai/research&quot;&gt;Learning a Driving Simulator&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;课程系列&quot;&gt;课程系列&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Udacity &lt;a href=&quot;https://classroom.udacity.com/courses/cs373&quot;&gt;自动驾驶课程&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">百度技术文章</summary></entry><entry><title type="html">RNN 与 LSTM 专题</title><link href="http://localhost:4000/dl/2017/04/09/rnn-lstm.html" rel="alternate" type="text/html" title="RNN 与 LSTM 专题" /><published>2017-04-09T15:22:47+08:00</published><updated>2017-04-09T15:22:47+08:00</updated><id>http://localhost:4000/dl/2017/04/09/rnn-lstm</id><content type="html" xml:base="http://localhost:4000/dl/2017/04/09/rnn-lstm.html">&lt;h2 id=&quot;目前的一些成果&quot;&gt;目前的一些成果&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://karpathy.github.io/2015/05/21/rnn-effectiveness/&quot;&gt;The Unreasonable Effectiveness of Recurrent Neural Networks&lt;/a&gt;&lt;/p&gt;
